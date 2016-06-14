@@ -187,6 +187,25 @@ background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgb
      <string>OFF</string>
     </property>
    </widget>
+   <widget class="QLabel" name="statusLabel">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>450</y>
+      <width>800</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(185, 188, 195);</string>
+    </property>
+    <property name="text">
+     <string>Warning: ERS 2(ERM 5), OVP error!</string>
+    </property>
+   </widget>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
