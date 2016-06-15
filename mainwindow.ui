@@ -37,7 +37,7 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(171, 255, 249, 255), stop:1 rgba(255, 255, 255, 255));
+   <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(38, 166, 223, 255), stop:1 rgba(255, 255, 255, 255));
 </string>
   </property>
   <property name="locale">
@@ -140,7 +140,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgb
     <property name="geometry">
      <rect>
       <x>350</x>
-      <y>180</y>
+      <y>150</y>
       <width>101</width>
       <height>31</height>
      </rect>
@@ -164,25 +164,28 @@ background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgb
     <property name="geometry">
      <rect>
       <x>300</x>
-      <y>220</y>
+      <y>190</y>
       <width>100</width>
-      <height>30</height>
+      <height>70</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true"/>
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(229, 236, 235, 255), stop:1 rgba(255, 255, 255, 255));</string>
     </property>
     <property name="text">
      <string>ON</string>
+    </property>
+    <property name="checkable">
+     <bool>true</bool>
     </property>
    </widget>
    <widget class="QPushButton" name="burnOffButton">
     <property name="geometry">
      <rect>
       <x>400</x>
-      <y>220</y>
+      <y>190</y>
       <width>100</width>
-      <height>30</height>
+      <height>70</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -190,6 +193,15 @@ background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgb
     </property>
     <property name="text">
      <string>OFF</string>
+    </property>
+    <property name="checkable">
+     <bool>true</bool>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+    <property name="default">
+     <bool>true</bool>
     </property>
    </widget>
    <widget class="QLabel" name="statusLabel">
