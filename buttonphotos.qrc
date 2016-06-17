@@ -4,5 +4,7 @@
         <file>buttonphotos/icon-info.png</file>
         <file>buttonphotos/icon-setting.png</file>
         <file>buttonphotos/icon-status.png</file>
+        <file>buttonphotos/Meanwell.png</file>
+        <file>buttonphotos/Meanwell_2.png</file>
     </qresource>
 </RCC>
