@@ -15,6 +15,9 @@ public:
     explicit SettingDialog(QWidget *parent = 0);
     ~SettingDialog();
 
+private slots:
+    void receiveShow();
+
 private:
     Ui::SettingDialog *ui;
 };

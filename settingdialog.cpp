@@ -12,3 +12,8 @@ SettingDialog::~SettingDialog()
 {
     delete ui;
 }
+
+void SettingDialog::receiveShow()
+{
+    this->show();
+}

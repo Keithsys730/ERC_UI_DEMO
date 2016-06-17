@@ -27,7 +27,9 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    SettingDialog settingDialog;
+
+signals:
+    void showSettingDialog();
 };
 
 #endif // MAINWINDOW_H

@@ -2,10 +2,13 @@
 #include <QApplication>
 #include <QSplashScreen>
 #include <QThread>
+#include "settingdialog.h"
 
 int main(int argc, char *argv[])
 {
-    QApplication a(argc, argv);
+    QApplication app(argc, argv);
+    MainWindow mainPage;
+    SettingDialog settingDialog;
 
     /*
     QSplashScreen *splash = new QSplashScreen;
@@ -18,12 +21,14 @@ int main(int argc, char *argv[])
     //splash->hide();
     */
 
-    MainWindow w;
+    app.setOverrideCursor(QCursor(Qt::BlankCursor));
+    mainPage.setWindowFlags(Qt::Window|Qt::FramelessWindowHint);
+    settingDialog.setWindowFlags(Qt::Window|Qt::FramelessWindowHint);
+    //mainPage.showFullScreen();
 
-    a.setOverrideCursor(QCursor(Qt::BlankCursor));
-    w.setWindowFlags(Qt::Window|Qt::FramelessWindowHint);
-    //w.showFullScreen();
-    w.show();
+    mainPage.show();
 
-    return a.exec();
+    QObject::connect(&mainPage, SIGNAL(showSettingDialog()),&settingDialog,SLOT(receiveShow()));
+
+    return app.exec();
 }
