@@ -77,16 +77,164 @@
     <attribute name="title">
      <string>Mode</string>
     </attribute>
-   </widget>
-   <widget class="QWidget" name="networkTab">
-    <attribute name="title">
-     <string>Network</string>
-    </attribute>
-   </widget>
-   <widget class="QWidget" name="timeTab">
-    <attribute name="title">
-     <string>Time</string>
-    </attribute>
+    <widget class="QRadioButton" name="ccRadioButton">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>50</y>
+       <width>80</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>20</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>CC</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="cpRadioButton">
+     <property name="geometry">
+      <rect>
+       <x>430</x>
+       <y>50</y>
+       <width>80</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>20</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>CP</string>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="setCurrentLabel">
+     <property name="geometry">
+      <rect>
+       <x>240</x>
+       <y>140</y>
+       <width>150</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>20</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Current(A):</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="setCurrentLineEdit">
+     <property name="geometry">
+      <rect>
+       <x>400</x>
+       <y>135</y>
+       <width>120</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>30</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="inputMask">
+      <string>00.0</string>
+     </property>
+     <property name="text">
+      <string>12.5</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="setCurrentLineEdit_2">
+     <property name="geometry">
+      <rect>
+       <x>400</x>
+       <y>230</y>
+       <width>120</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>30</pointsize>
+      </font>
+     </property>
+     <property name="inputMask">
+      <string>000</string>
+     </property>
+     <property name="text">
+      <string>320</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="setPowerLabel">
+     <property name="geometry">
+      <rect>
+       <x>240</x>
+       <y>235</y>
+       <width>150</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>20</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Power(W):</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QFrame" name="frame">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>110</y>
+       <width>491</width>
+       <height>191</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+    </widget>
+    <zorder>frame</zorder>
+    <zorder>ccRadioButton</zorder>
+    <zorder>cpRadioButton</zorder>
+    <zorder>setCurrentLabel</zorder>
+    <zorder>setCurrentLineEdit</zorder>
+    <zorder>setCurrentLineEdit_2</zorder>
+    <zorder>setPowerLabel</zorder>
    </widget>
    <widget class="QWidget" name="relayTab">
     <attribute name="title">
@@ -96,6 +244,16 @@
    <widget class="QWidget" name="logTab">
     <attribute name="title">
      <string>Log</string>
+    </attribute>
+   </widget>
+   <widget class="QWidget" name="timeTab">
+    <attribute name="title">
+     <string>Time</string>
+    </attribute>
+   </widget>
+   <widget class="QWidget" name="networkTab">
+    <attribute name="title">
+     <string>Network</string>
     </attribute>
    </widget>
    <widget class="QWidget" name="languageTab">
