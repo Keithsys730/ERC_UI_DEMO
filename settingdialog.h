@@ -18,8 +18,13 @@ public:
 private slots:
     void receiveShow();
 
+    void on_returnMainButton_clicked();
+
 private:
     Ui::SettingDialog *ui;
+
+signals:
+    void showMainPage();
 };
 
 #endif // SETTINGDIALOG_H

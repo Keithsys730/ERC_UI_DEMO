@@ -18,12 +18,10 @@ public:
 
 private slots:
     void on_burnOffButton_pressed();
-
     void on_burnOnButton_pressed();
-
     void startBurnTime();
-
     void on_settingButton_clicked();
+    void receiveShow();
 
 private:
     Ui::MainWindow *ui;

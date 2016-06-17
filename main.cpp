@@ -29,6 +29,7 @@ int main(int argc, char *argv[])
     mainPage.show();
 
     QObject::connect(&mainPage, SIGNAL(showSettingDialog()),&settingDialog,SLOT(receiveShow()));
+    QObject::connect(&settingDialog, SIGNAL(showMainPage()),&mainPage,SLOT(receiveShow()));
 
     return app.exec();
 }

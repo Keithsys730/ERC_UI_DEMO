@@ -45,6 +45,11 @@ void MainWindow::startBurnTime()
 
 void MainWindow::on_settingButton_clicked()
 {
-    this->hide();
     emit showSettingDialog();
+    this->hide();
+}
+
+void MainWindow::receiveShow()
+{
+    this->show();
 }
