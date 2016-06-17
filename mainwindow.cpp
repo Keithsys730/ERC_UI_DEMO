@@ -36,9 +36,16 @@ void MainWindow::on_burnOnButton_pressed()
 void MainWindow::startBurnTime()
 {
     int burnTime=0;
-    for(int temp;temp<100;temp++)
+    for(int temp=0;temp<100;temp++)
     {
         burnTime+=1;
         ui->burnTimeLabel->setText(QString::number(burnTime));
     }
+}
+
+void MainWindow::on_settingButton_clicked()
+{
+    this->hide();
+    settingDialog.show();
+    settingDialog.exec();
 }
