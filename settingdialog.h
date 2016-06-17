@@ -17,7 +17,6 @@ public:
 
 private slots:
     void receiveShow();
-
     void on_returnMainButton_clicked();
 
 private:

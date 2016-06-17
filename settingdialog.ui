@@ -47,6 +47,63 @@
     <string>Home</string>
    </property>
   </widget>
+  <widget class="QTabWidget" name="settingTabWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>70</y>
+     <width>800</width>
+     <height>410</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTabWidget::tab-bar{alignment:center}</string>
+   </property>
+   <property name="tabShape">
+    <enum>QTabWidget::Rounded</enum>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="modeTab">
+    <attribute name="title">
+     <string>Mode</string>
+    </attribute>
+   </widget>
+   <widget class="QWidget" name="networkTab">
+    <attribute name="title">
+     <string>Network</string>
+    </attribute>
+   </widget>
+   <widget class="QWidget" name="timeTab">
+    <attribute name="title">
+     <string>Time</string>
+    </attribute>
+   </widget>
+   <widget class="QWidget" name="relayTab">
+    <attribute name="title">
+     <string>Relay</string>
+    </attribute>
+   </widget>
+   <widget class="QWidget" name="logTab">
+    <attribute name="title">
+     <string>Log</string>
+    </attribute>
+   </widget>
+   <widget class="QWidget" name="languageTab">
+    <attribute name="title">
+     <string>Language</string>
+    </attribute>
+   </widget>
+  </widget>
  </widget>
  <resources/>
  <connections/>
