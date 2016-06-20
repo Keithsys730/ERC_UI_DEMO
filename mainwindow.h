@@ -22,6 +22,7 @@ private slots:
     void on_settingButton_clicked();
     void on_statusButton_clicked();
     void on_logButton_clicked();
+    void on_informationButton_clicked();
     void receiveShow();
 
 private:
@@ -31,6 +32,7 @@ signals:
     void showSettingDialog();
     void showStatusDialog();
     void showLogDialog();
+    void showInformationDialog();
 };
 
 #endif // MAINWINDOW_H
