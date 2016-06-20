@@ -49,6 +49,12 @@ void MainWindow::on_settingButton_clicked()
     this->hide();
 }
 
+void MainWindow::on_statusButton_clicked()
+{
+    emit showStatusDialog();
+    this->hide();
+}
+
 void MainWindow::receiveShow()
 {
     this->show();

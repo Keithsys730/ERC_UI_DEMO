@@ -21,6 +21,7 @@ private slots:
     void on_burnOnButton_pressed();
     void startBurnTime();
     void on_settingButton_clicked();
+    void on_statusButton_clicked();
     void receiveShow();
 
 private:
@@ -28,6 +29,7 @@ private:
 
 signals:
     void showSettingDialog();
+    void showStatusDialog();
 };
 
 #endif // MAINWINDOW_H

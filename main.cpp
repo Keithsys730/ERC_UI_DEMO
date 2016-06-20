@@ -3,12 +3,14 @@
 #include <QSplashScreen>
 #include <QThread>
 #include "settingdialog.h"
+#include "statusdialog.h"
 
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
     MainWindow mainPage;
     SettingDialog settingDialog;
+    StatusDialog statusDialog;
 
     /*
     QSplashScreen *splash = new QSplashScreen;
@@ -24,12 +26,15 @@ int main(int argc, char *argv[])
     app.setOverrideCursor(QCursor(Qt::BlankCursor));
     mainPage.setWindowFlags(Qt::Window|Qt::FramelessWindowHint);
     settingDialog.setWindowFlags(Qt::Window|Qt::FramelessWindowHint);
+    statusDialog.setWindowFlags(Qt::Window|Qt::FramelessWindowHint);
     //mainPage.showFullScreen();
 
     mainPage.show();
 
     QObject::connect(&mainPage, SIGNAL(showSettingDialog()),&settingDialog,SLOT(receiveShow()));
     QObject::connect(&settingDialog, SIGNAL(showMainPage()),&mainPage,SLOT(receiveShow()));
+    QObject::connect(&mainPage, SIGNAL(showStatusDialog()),&statusDialog,SLOT(receiveShow()));
+    QObject::connect(&statusDialog, SIGNAL(showMainPage()),&mainPage,SLOT(receiveShow()));
 
     return app.exec();
 }
