@@ -55,6 +55,12 @@ void MainWindow::on_statusButton_clicked()
     this->hide();
 }
 
+void MainWindow::on_logButton_clicked()
+{
+    emit showLogDialog();
+    this->hide();
+}
+
 void MainWindow::receiveShow()
 {
     this->show();

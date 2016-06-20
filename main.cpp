@@ -4,6 +4,7 @@
 #include <QThread>
 #include "settingdialog.h"
 #include "statusdialog.h"
+#include "logdialog.h"
 
 int main(int argc, char *argv[])
 {
@@ -11,6 +12,7 @@ int main(int argc, char *argv[])
     MainWindow mainPage;
     SettingDialog settingDialog;
     StatusDialog statusDialog;
+    LogDialog logDialog;
 
     /*
     QSplashScreen *splash = new QSplashScreen;
@@ -27,6 +29,7 @@ int main(int argc, char *argv[])
     mainPage.setWindowFlags(Qt::Window|Qt::FramelessWindowHint);
     settingDialog.setWindowFlags(Qt::Window|Qt::FramelessWindowHint);
     statusDialog.setWindowFlags(Qt::Window|Qt::FramelessWindowHint);
+    logDialog.setWindowFlags(Qt::Window|Qt::FramelessWindowHint);
     //mainPage.showFullScreen();
 
     mainPage.show();
@@ -35,6 +38,8 @@ int main(int argc, char *argv[])
     QObject::connect(&settingDialog, SIGNAL(showMainPage()),&mainPage,SLOT(receiveShow()));
     QObject::connect(&mainPage, SIGNAL(showStatusDialog()),&statusDialog,SLOT(receiveShow()));
     QObject::connect(&statusDialog, SIGNAL(showMainPage()),&mainPage,SLOT(receiveShow()));
+    QObject::connect(&mainPage, SIGNAL(showLogDialog()),&logDialog,SLOT(receiveShow()));
+    QObject::connect(&logDialog, SIGNAL(showMainPage()),&mainPage,SLOT(receiveShow()));
 
     return app.exec();
 }

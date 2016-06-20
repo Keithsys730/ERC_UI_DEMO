@@ -2,7 +2,6 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "settingdialog.h"
 
 namespace Ui {
 class MainWindow;
@@ -22,6 +21,7 @@ private slots:
     void startBurnTime();
     void on_settingButton_clicked();
     void on_statusButton_clicked();
+    void on_logButton_clicked();
     void receiveShow();
 
 private:
@@ -30,6 +30,7 @@ private:
 signals:
     void showSettingDialog();
     void showStatusDialog();
+    void showLogDialog();
 };
 
 #endif // MAINWINDOW_H

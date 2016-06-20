@@ -15,15 +15,18 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     settingdialog.cpp \
-    statusdialog.cpp
+    statusdialog.cpp \
+    logdialog.cpp
 
 HEADERS  += mainwindow.h \
     settingdialog.h \
-    statusdialog.h
+    statusdialog.h \
+    logdialog.h
 
 FORMS    += mainwindow.ui \
     settingdialog.ui \
-    statusdialog.ui
+    statusdialog.ui \
+    logdialog.ui
 
 RESOURCES += \
     buttonphotos.qrc
