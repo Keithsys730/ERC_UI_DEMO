@@ -324,10 +324,10 @@ background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgb
     </property>
     <property name="geometry">
      <rect>
-      <x>5</x>
+      <x>40</x>
       <y>5</y>
-      <width>150</width>
-      <height>90</height>
+      <width>141</width>
+      <height>81</height>
      </rect>
     </property>
     <property name="styleSheet">
