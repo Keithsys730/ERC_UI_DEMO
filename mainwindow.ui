@@ -178,6 +178,12 @@ background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgb
     <property name="checkable">
      <bool>true</bool>
     </property>
+    <property name="checked">
+     <bool>false</bool>
+    </property>
+    <property name="autoExclusive">
+     <bool>true</bool>
+    </property>
    </widget>
    <widget class="QPushButton" name="burnOffButton">
     <property name="geometry">
@@ -198,6 +204,9 @@ background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgb
      <bool>true</bool>
     </property>
     <property name="checked">
+     <bool>true</bool>
+    </property>
+    <property name="autoExclusive">
      <bool>true</bool>
     </property>
     <property name="default">
