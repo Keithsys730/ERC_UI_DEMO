@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+//#include <QElapsedTimer>
 
 namespace Ui {
 class MainWindow;
@@ -27,6 +28,13 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+//    QElapsedTimer burnTimer;
+//    int burnTime;
+//    bool burnTimeStart;
+//    int startPressX, startPressY;
+
+//    virtual void mouseMoveEvent(QMouseEvent *event);
+//    virtual void mousePressEvent(QMouseEvent *event);
 
 signals:
     void showSettingDialog();
