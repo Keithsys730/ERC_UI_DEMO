@@ -80,6 +80,9 @@
      <height>80</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(187, 193, 197);</string>
+   </property>
    <property name="frameShape">
     <enum>QFrame::Panel</enum>
    </property>
@@ -324,6 +327,9 @@
      <height>80</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(249, 92, 119);</string>
+   </property>
    <property name="frameShape">
     <enum>QFrame::Panel</enum>
    </property>
@@ -559,6 +565,37 @@
     </property>
    </widget>
   </widget>
+  <widget class="QFrame" name="baseFrame">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>480</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(38, 166, 223, 255), stop:1 rgba(255, 255, 255, 255));</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+  <zorder>baseFrame</zorder>
+  <zorder>statusLabel</zorder>
+  <zorder>returnMainButton</zorder>
+  <zorder>ersLabel</zorder>
+  <zorder>erm1Frame</zorder>
+  <zorder>erm2Frame</zorder>
+  <zorder>erm3Frame</zorder>
+  <zorder>erm4Frame</zorder>
+  <zorder>erm8Frame</zorder>
+  <zorder>erm5Frame</zorder>
+  <zorder>erm6Frame</zorder>
+  <zorder>erm7Frame</zorder>
  </widget>
  <resources/>
  <connections/>

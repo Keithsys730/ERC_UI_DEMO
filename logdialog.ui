@@ -137,8 +137,14 @@
    <property name="currentIndex">
     <number>22</number>
    </property>
+   <property name="maxVisibleItems">
+    <number>7</number>
+   </property>
    <property name="maxCount">
     <number>32</number>
+   </property>
+   <property name="insertPolicy">
+    <enum>QComboBox::NoInsert</enum>
    </property>
    <item>
     <property name="text">
@@ -301,6 +307,31 @@
     </property>
    </item>
   </widget>
+  <widget class="QFrame" name="baseFrame">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>480</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(38, 166, 223, 255), stop:1 rgba(255, 255, 255, 255));</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+  <zorder>baseFrame</zorder>
+  <zorder>returnMainButton</zorder>
+  <zorder>logLabel</zorder>
+  <zorder>logTabWidget</zorder>
+  <zorder>ersIndexLabel</zorder>
+  <zorder>ersIndexComboBox</zorder>
  </widget>
  <resources/>
  <connections/>

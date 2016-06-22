@@ -58,7 +58,7 @@
     <enum>QTabWidget::Rounded</enum>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>2</number>
    </property>
    <widget class="QWidget" name="modeTab">
     <attribute name="title">
@@ -326,6 +326,18 @@
      <property name="currentText">
       <string>None</string>
      </property>
+     <property name="maxVisibleItems">
+      <number>5</number>
+     </property>
+     <property name="maxCount">
+      <number>5</number>
+     </property>
+     <property name="insertPolicy">
+      <enum>QComboBox::NoInsert</enum>
+     </property>
+     <property name="frame">
+      <bool>true</bool>
+     </property>
      <item>
       <property name="text">
        <string>None</string>
@@ -357,8 +369,8 @@
       <rect>
        <x>360</x>
        <y>180</y>
-       <width>200</width>
-       <height>40</height>
+       <width>201</width>
+       <height>43</height>
       </rect>
      </property>
      <property name="font">
@@ -368,6 +380,15 @@
      </property>
      <property name="currentText">
       <string>None</string>
+     </property>
+     <property name="maxVisibleItems">
+      <number>5</number>
+     </property>
+     <property name="maxCount">
+      <number>5</number>
+     </property>
+     <property name="insertPolicy">
+      <enum>QComboBox::NoInsert</enum>
      </property>
      <item>
       <property name="text">
@@ -411,6 +432,15 @@
      </property>
      <property name="currentText">
       <string>None</string>
+     </property>
+     <property name="maxVisibleItems">
+      <number>5</number>
+     </property>
+     <property name="maxCount">
+      <number>5</number>
+     </property>
+     <property name="insertPolicy">
+      <enum>QComboBox::NoInsert</enum>
      </property>
      <item>
       <property name="text">
@@ -483,6 +513,15 @@
      </property>
      <property name="currentIndex">
       <number>3</number>
+     </property>
+     <property name="maxVisibleItems">
+      <number>5</number>
+     </property>
+     <property name="maxCount">
+      <number>8</number>
+     </property>
+     <property name="insertPolicy">
+      <enum>QComboBox::NoInsert</enum>
      </property>
      <item>
       <property name="text">
@@ -565,6 +604,12 @@
      </property>
      <property name="currentIndex">
       <number>0</number>
+     </property>
+     <property name="maxVisibleItems">
+      <number>5</number>
+     </property>
+     <property name="maxCount">
+      <number>10</number>
      </property>
      <item>
       <property name="text">
@@ -985,6 +1030,29 @@
     <string/>
    </property>
   </widget>
+  <widget class="QFrame" name="baseFrame">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>480</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(38, 166, 223, 255), stop:1 rgba(255, 255, 255, 255));</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+  <zorder>baseFrame</zorder>
+  <zorder>settingLabel</zorder>
+  <zorder>settingTabWidget</zorder>
+  <zorder>returnMainButton</zorder>
  </widget>
  <resources/>
  <connections/>
