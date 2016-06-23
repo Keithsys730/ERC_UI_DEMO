@@ -33,3 +33,7 @@ FORMS    += mainwindow.ui \
 
 RESOURCES += \
     buttonphotos.qrc
+
+TRANSLATIONS += erc_demo_en.ts  \
+    erc_demo_tw_zh.ts   \
+    erc_demo_cn_zh.ts

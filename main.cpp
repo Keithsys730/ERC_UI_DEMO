@@ -6,10 +6,16 @@
 #include "statusdialog.h"
 #include "logdialog.h"
 #include "informationdialog.h"
+#include <QTranslator>
 
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
+    QTranslator translator;
+
+    translator.load(":/erc_demo_cn_zh.qm");
+    app.installTranslator(&translator);
+
     MainWindow mainPage;
     SettingDialog settingDialog;
     StatusDialog statusDialog;

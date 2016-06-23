@@ -6,5 +6,6 @@
         <file>buttonphotos/icon-status.png</file>
         <file>buttonphotos/Meanwell.png</file>
         <file>buttonphotos/Meanwell_2.png</file>
+        <file>erc_demo_cn_zh.qm</file>
     </qresource>
 </RCC>
