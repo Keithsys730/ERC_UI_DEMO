@@ -23,3 +23,13 @@ void InformationDialog::on_returnMainButton_clicked()
     emit showMainPage();
     this->hide();
 }
+
+void InformationDialog::on_aboutPushButton_clicked()
+{
+    ui->InformationStackedWidget->setCurrentIndex(1);
+}
+
+void InformationDialog::on_infoPushButton_clicked()
+{
+    ui->InformationStackedWidget->setCurrentIndex(0);
+}

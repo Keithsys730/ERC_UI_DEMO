@@ -53,10 +53,10 @@
   <widget class="QStackedWidget" name="InformationStackedWidget">
    <property name="geometry">
     <rect>
-     <x>0</x>
+     <x>5</x>
      <y>80</y>
-     <width>800</width>
-     <height>400</height>
+     <width>790</width>
+     <height>395</height>
     </rect>
    </property>
    <property name="contextMenuPolicy">
@@ -66,7 +66,7 @@
     <bool>false</bool>
    </property>
    <property name="frameShape">
-    <enum>QFrame::StyledPanel</enum>
+    <enum>QFrame::Box</enum>
    </property>
    <property name="frameShadow">
     <enum>QFrame::Sunken</enum>
@@ -162,6 +162,33 @@
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
+    <widget class="QPushButton" name="aboutPushButton">
+     <property name="geometry">
+      <rect>
+       <x>710</x>
+       <y>130</y>
+       <width>71</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>28</pointsize>
+      </font>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::NoFocus</enum>
+     </property>
+     <property name="text">
+      <string>&gt;</string>
+     </property>
+     <property name="autoDefault">
+      <bool>false</bool>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
    </widget>
    <widget class="QWidget" name="aboutPage">
     <widget class="QLabel" name="aboutLabel">
@@ -183,6 +210,33 @@
      </property>
      <property name="alignment">
       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="infoPushButton">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>130</y>
+       <width>71</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>28</pointsize>
+      </font>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::NoFocus</enum>
+     </property>
+     <property name="text">
+      <string>&lt;</string>
+     </property>
+     <property name="autoDefault">
+      <bool>false</bool>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
      </property>
     </widget>
    </widget>

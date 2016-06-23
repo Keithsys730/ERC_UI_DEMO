@@ -18,6 +18,8 @@ public:
 private slots:
     void receiveShow();
     void on_returnMainButton_clicked();
+    void on_aboutPushButton_clicked();
+    void on_infoPushButton_clicked();
 
 private:
     Ui::InformationDialog *ui;
