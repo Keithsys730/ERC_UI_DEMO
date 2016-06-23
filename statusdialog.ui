@@ -89,6 +89,9 @@
    <property name="frameShadow">
     <enum>QFrame::Plain</enum>
    </property>
+   <property name="lineWidth">
+    <number>3</number>
+   </property>
    <widget class="QLabel" name="erm1Label">
     <property name="geometry">
      <rect>
@@ -153,6 +156,9 @@
    <property name="frameShadow">
     <enum>QFrame::Plain</enum>
    </property>
+   <property name="lineWidth">
+    <number>3</number>
+   </property>
    <widget class="QLabel" name="erm2Label">
     <property name="geometry">
      <rect>
@@ -214,6 +220,9 @@
    <property name="frameShadow">
     <enum>QFrame::Plain</enum>
    </property>
+   <property name="lineWidth">
+    <number>3</number>
+   </property>
    <widget class="QLabel" name="erm3Label">
     <property name="geometry">
      <rect>
@@ -274,6 +283,9 @@
    </property>
    <property name="frameShadow">
     <enum>QFrame::Plain</enum>
+   </property>
+   <property name="lineWidth">
+    <number>3</number>
    </property>
    <widget class="QLabel" name="erm4Label">
     <property name="geometry">
@@ -339,6 +351,9 @@
    <property name="frameShadow">
     <enum>QFrame::Plain</enum>
    </property>
+   <property name="lineWidth">
+    <number>3</number>
+   </property>
    <widget class="QLabel" name="erm8Label">
     <property name="geometry">
      <rect>
@@ -400,6 +415,9 @@
    <property name="frameShadow">
     <enum>QFrame::Plain</enum>
    </property>
+   <property name="lineWidth">
+    <number>3</number>
+   </property>
    <widget class="QLabel" name="erm5Label">
     <property name="geometry">
      <rect>
@@ -460,6 +478,9 @@
    </property>
    <property name="frameShadow">
     <enum>QFrame::Plain</enum>
+   </property>
+   <property name="lineWidth">
+    <number>3</number>
    </property>
    <widget class="QLabel" name="erm6Label">
     <property name="geometry">
@@ -524,6 +545,9 @@
    </property>
    <property name="frameShadow">
     <enum>QFrame::Plain</enum>
+   </property>
+   <property name="lineWidth">
+    <number>3</number>
    </property>
    <widget class="QLabel" name="erm7Label">
     <property name="geometry">

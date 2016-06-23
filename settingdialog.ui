@@ -61,7 +61,7 @@
     <enum>QTabWidget::Rounded</enum>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>5</number>
    </property>
    <property name="elideMode">
     <enum>Qt::ElideLeft</enum>
@@ -143,9 +143,9 @@
      <property name="geometry">
       <rect>
        <x>400</x>
-       <y>135</y>
-       <width>120</width>
-       <height>40</height>
+       <y>125</y>
+       <width>131</width>
+       <height>61</height>
       </rect>
      </property>
      <property name="font">
@@ -176,9 +176,9 @@
      <property name="geometry">
       <rect>
        <x>400</x>
-       <y>230</y>
-       <width>120</width>
-       <height>40</height>
+       <y>220</y>
+       <width>131</width>
+       <height>61</height>
       </rect>
      </property>
      <property name="font">
@@ -344,7 +344,7 @@
      </property>
      <property name="font">
       <font>
-       <pointsize>20</pointsize>
+       <pointsize>18</pointsize>
       </font>
      </property>
      <property name="currentText">
@@ -399,7 +399,7 @@
      </property>
      <property name="font">
       <font>
-       <pointsize>20</pointsize>
+       <pointsize>18</pointsize>
       </font>
      </property>
      <property name="currentText">
@@ -451,7 +451,7 @@
      </property>
      <property name="font">
       <font>
-       <pointsize>20</pointsize>
+       <pointsize>18</pointsize>
       </font>
      </property>
      <property name="currentText">
@@ -529,7 +529,7 @@
      </property>
      <property name="font">
       <font>
-       <pointsize>20</pointsize>
+       <pointsize>18</pointsize>
       </font>
      </property>
      <property name="currentText">
@@ -620,7 +620,7 @@
      </property>
      <property name="font">
       <font>
-       <pointsize>20</pointsize>
+       <pointsize>18</pointsize>
       </font>
      </property>
      <property name="currentText">
@@ -779,15 +779,15 @@
     <widget class="QLineEdit" name="setIPLineEdit">
      <property name="geometry">
       <rect>
-       <x>290</x>
+       <x>320</x>
        <y>55</y>
-       <width>370</width>
+       <width>300</width>
        <height>40</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <pointsize>30</pointsize>
+       <pointsize>24</pointsize>
       </font>
      </property>
      <property name="styleSheet">
@@ -806,7 +806,7 @@
     <widget class="QLabel" name="setIPLabel">
      <property name="geometry">
       <rect>
-       <x>130</x>
+       <x>160</x>
        <y>55</y>
        <width>160</width>
        <height>40</height>
@@ -827,7 +827,7 @@
     <widget class="QLabel" name="setMaskLabel">
      <property name="geometry">
       <rect>
-       <x>130</x>
+       <x>160</x>
        <y>125</y>
        <width>160</width>
        <height>40</height>
@@ -848,15 +848,15 @@
     <widget class="QLineEdit" name="setMaskLineEdit">
      <property name="geometry">
       <rect>
-       <x>290</x>
+       <x>320</x>
        <y>125</y>
-       <width>370</width>
+       <width>300</width>
        <height>40</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <pointsize>30</pointsize>
+       <pointsize>24</pointsize>
       </font>
      </property>
      <property name="styleSheet">
@@ -875,7 +875,7 @@
     <widget class="QLabel" name="setGatewayLabel">
      <property name="geometry">
       <rect>
-       <x>130</x>
+       <x>160</x>
        <y>195</y>
        <width>160</width>
        <height>40</height>
@@ -896,15 +896,15 @@
     <widget class="QLineEdit" name="setGatewayLineEdit">
      <property name="geometry">
       <rect>
-       <x>290</x>
+       <x>320</x>
        <y>195</y>
-       <width>370</width>
+       <width>300</width>
        <height>40</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <pointsize>30</pointsize>
+       <pointsize>24</pointsize>
       </font>
      </property>
      <property name="styleSheet">
@@ -923,7 +923,7 @@
     <widget class="QLabel" name="setDNSLabel">
      <property name="geometry">
       <rect>
-       <x>130</x>
+       <x>160</x>
        <y>265</y>
        <width>160</width>
        <height>40</height>
@@ -944,15 +944,15 @@
     <widget class="QLineEdit" name="setDNSLineEdit">
      <property name="geometry">
       <rect>
-       <x>290</x>
+       <x>320</x>
        <y>265</y>
-       <width>370</width>
+       <width>300</width>
        <height>40</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <pointsize>30</pointsize>
+       <pointsize>24</pointsize>
       </font>
      </property>
      <property name="styleSheet">

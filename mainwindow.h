@@ -28,6 +28,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    void initialButtonBackgroundColor();
 //    QElapsedTimer burnTimer;
 //    int burnTime;
 //    bool burnTimeStart;

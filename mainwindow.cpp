@@ -7,6 +7,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    initialButtonBackgroundColor();
 }
 
 MainWindow::~MainWindow()
@@ -14,9 +15,23 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+void MainWindow::initialButtonBackgroundColor()
+{
+    ui->burnOffButton->setStyleSheet("background-color: none");
+    ui->burnOnButton->setStyleSheet("background-color: none");
+}
+
 void MainWindow::on_burnOffButton_pressed()
 {
     //ui->burnTimeLabel->setText(QString::number(0));
+    if(ui->burnOffButton->isChecked())
+    {
+        //ui->burnOffButton->setStyleSheet("background-color: none");
+    }
+    else
+    {
+        //ui->burnOffButton->setStyleSheet("background-color: none");
+    }
 }
 
 void MainWindow::on_burnOnButton_pressed()
