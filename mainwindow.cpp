@@ -23,7 +23,7 @@ void MainWindow::on_burnOnButton_pressed()
 {
     if(!ui->burnOnButton->isChecked())
     {
-        burnTime = 0;
+        //burnTime = 0;
         /*burnTimeStart = true;
         burnTimer.start();
         while(burnTimeStart)

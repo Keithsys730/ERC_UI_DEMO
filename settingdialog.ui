@@ -48,6 +48,9 @@
      <pointsize>20</pointsize>
     </font>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
    <property name="autoFillBackground">
     <bool>false</bool>
    </property>
@@ -58,7 +61,10 @@
     <enum>QTabWidget::Rounded</enum>
    </property>
    <property name="currentIndex">
-    <number>2</number>
+    <number>0</number>
+   </property>
+   <property name="elideMode">
+    <enum>Qt::ElideLeft</enum>
    </property>
    <widget class="QWidget" name="modeTab">
     <attribute name="title">
@@ -77,6 +83,9 @@
       <font>
        <pointsize>20</pointsize>
       </font>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::NoFocus</enum>
      </property>
      <property name="text">
       <string>CC</string>
@@ -98,6 +107,9 @@
       <font>
        <pointsize>20</pointsize>
       </font>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::NoFocus</enum>
      </property>
      <property name="text">
       <string>CP</string>
@@ -963,11 +975,14 @@
        <pointsize>24</pointsize>
       </font>
      </property>
+     <property name="focusPolicy">
+      <enum>Qt::NoFocus</enum>
+     </property>
      <property name="text">
       <string>Simplified Chinese</string>
      </property>
      <property name="checked">
-      <bool>false</bool>
+      <bool>true</bool>
      </property>
     </widget>
     <widget class="QRadioButton" name="ctRadioButton">
@@ -983,6 +998,9 @@
       <font>
        <pointsize>24</pointsize>
       </font>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::NoFocus</enum>
      </property>
      <property name="text">
       <string>Traditional Chinese</string>
@@ -1005,11 +1023,14 @@
        <pointsize>24</pointsize>
       </font>
      </property>
+     <property name="focusPolicy">
+      <enum>Qt::NoFocus</enum>
+     </property>
      <property name="text">
       <string>English</string>
      </property>
      <property name="checked">
-      <bool>true</bool>
+      <bool>false</bool>
      </property>
     </widget>
    </widget>

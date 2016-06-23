@@ -81,7 +81,7 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(187, 193, 197);</string>
+    <string notr="true"/>
    </property>
    <property name="frameShape">
     <enum>QFrame::Panel</enum>
@@ -143,6 +143,9 @@
      <width>150</width>
      <height>80</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(249, 92, 119);</string>
    </property>
    <property name="frameShape">
     <enum>QFrame::Panel</enum>
@@ -328,7 +331,7 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(249, 92, 119);</string>
+    <string notr="true">background-color: rgb(187, 193, 197);</string>
    </property>
    <property name="frameShape">
     <enum>QFrame::Panel</enum>
@@ -512,6 +515,9 @@
      <width>150</width>
      <height>80</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(187, 193, 197);</string>
    </property>
    <property name="frameShape">
     <enum>QFrame::Panel</enum>
