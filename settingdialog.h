@@ -18,6 +18,8 @@ public:
 private slots:
     void receiveShow();
     void on_returnMainButton_clicked();
+    void on_cpRadioButton_clicked();
+    void on_ccRadioButton_clicked();
 
 private:
     Ui::SettingDialog *ui;
