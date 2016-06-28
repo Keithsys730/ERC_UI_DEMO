@@ -140,7 +140,7 @@
         </rect>
        </property>
        <property name="text">
-        <string>30.5 A</string>
+        <string>0.0 A</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -156,7 +156,7 @@
         </rect>
        </property>
        <property name="text">
-        <string>22.5 V</string>
+        <string>0.0 V</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -207,7 +207,7 @@
         </rect>
        </property>
        <property name="text">
-        <string>30.5 A</string>
+        <string>0.0 A</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -223,7 +223,7 @@
         </rect>
        </property>
        <property name="text">
-        <string>22.5 V</string>
+        <string>0.0 V</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -274,7 +274,7 @@
         </rect>
        </property>
        <property name="text">
-        <string>30.5 A</string>
+        <string>0.0 A</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -290,7 +290,7 @@
         </rect>
        </property>
        <property name="text">
-        <string>22.5 V</string>
+        <string>0.0 V</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -714,7 +714,7 @@
         </rect>
        </property>
        <property name="text">
-        <string>30.5 A</string>
+        <string>0.0 A</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -730,7 +730,7 @@
         </rect>
        </property>
        <property name="text">
-        <string>22.5 V</string>
+        <string>0.0 V</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -781,7 +781,7 @@
         </rect>
        </property>
        <property name="text">
-        <string>30.5 A</string>
+        <string>0.0 A</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -797,7 +797,7 @@
         </rect>
        </property>
        <property name="text">
-        <string>22.5 V</string>
+        <string>0.0 V</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -848,7 +848,7 @@
         </rect>
        </property>
        <property name="text">
-        <string>30.5 A</string>
+        <string>0.0 A</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -864,7 +864,7 @@
         </rect>
        </property>
        <property name="text">
-        <string>22.5 V</string>
+        <string>0.0 V</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -982,7 +982,7 @@
         </rect>
        </property>
        <property name="text">
-        <string>30.5 A</string>
+        <string>0.0 A</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -998,7 +998,7 @@
         </rect>
        </property>
        <property name="text">
-        <string>22.5 V</string>
+        <string>0.0 V</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -1198,7 +1198,7 @@
         </rect>
        </property>
        <property name="text">
-        <string>30.5 A</string>
+        <string>0.0 A</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -1214,7 +1214,7 @@
         </rect>
        </property>
        <property name="text">
-        <string>22.5 V</string>
+        <string>0.0 V</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -1321,7 +1321,7 @@
         </rect>
        </property>
        <property name="text">
-        <string>30.5 A</string>
+        <string>0.0 A</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -1337,7 +1337,7 @@
         </rect>
        </property>
        <property name="text">
-        <string>22.5 V</string>
+        <string>0.0 V</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -1388,7 +1388,7 @@
         </rect>
        </property>
        <property name="text">
-        <string>30.5 A</string>
+        <string>0.0 A</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -1404,7 +1404,7 @@
         </rect>
        </property>
        <property name="text">
-        <string>22.5 V</string>
+        <string>0.0 V</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -1455,7 +1455,7 @@
         </rect>
        </property>
        <property name="text">
-        <string>30.5 A</string>
+        <string>0.0 A</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -1471,7 +1471,7 @@
         </rect>
        </property>
        <property name="text">
-        <string>22.5 V</string>
+        <string>0.0 V</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -1522,7 +1522,7 @@
         </rect>
        </property>
        <property name="text">
-        <string>30.5 A</string>
+        <string>0.0 A</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -1538,7 +1538,7 @@
         </rect>
        </property>
        <property name="text">
-        <string>22.5 V</string>
+        <string>0.0 V</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -1674,7 +1674,7 @@
         </rect>
        </property>
        <property name="text">
-        <string>30.5 A</string>
+        <string>0.0 A</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -1690,7 +1690,7 @@
         </rect>
        </property>
        <property name="text">
-        <string>22.5 V</string>
+        <string>0.0 V</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
