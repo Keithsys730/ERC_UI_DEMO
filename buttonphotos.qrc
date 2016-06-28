@@ -9,5 +9,6 @@
         <file>erc_demo_cn_zh.qm</file>
         <file>erc_demo_en.qm</file>
         <file>erc_demo_tw_zh.qm</file>
+        <file>buttonphotos/home.png</file>
     </qresource>
 </RCC>
