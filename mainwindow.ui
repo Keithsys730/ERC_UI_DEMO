@@ -312,7 +312,7 @@ color: rgb(248, 15, 15);</string>
       </font>
      </property>
      <property name="focusPolicy">
-      <enum>Qt::NoFocus</enum>
+      <enum>Qt::WheelFocus</enum>
      </property>
      <property name="styleSheet">
       <string notr="true">border-radius:3px; 
@@ -469,7 +469,7 @@ background-color: rgb(29, 255, 51);</string>
       </font>
      </property>
      <property name="focusPolicy">
-      <enum>Qt::NoFocus</enum>
+      <enum>Qt::WheelFocus</enum>
      </property>
      <property name="styleSheet">
       <string notr="true">border-radius:3px; 
@@ -626,13 +626,6 @@ background-color: rgb(249, 92, 119);</string>
       <bool>true</bool>
      </property>
     </widget>
-    <zorder>burnOffButton</zorder>
-    <zorder>burnOnButton</zorder>
-    <zorder>modeLabel</zorder>
-    <zorder>timeLabel_3</zorder>
-    <zorder>timeLabel_3</zorder>
-    <zorder>burnCurrentUnitLabel</zorder>
-    <zorder>brunTimeUnitLabel</zorder>
    </widget>
    <widget class="QPushButton" name="websiteButton">
     <property name="enabled">

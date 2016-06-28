@@ -334,6 +334,9 @@
      </property>
     </widget>
     <widget class="QComboBox" name="relay1TriggerComboBox">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>320</x>
@@ -387,6 +390,9 @@
      </item>
     </widget>
     <widget class="QComboBox" name="relay2TriggerComboBox">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>320</x>
@@ -425,6 +431,9 @@
      </item>
     </widget>
     <widget class="QComboBox" name="relay3TriggerComboBox">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>320</x>
@@ -489,6 +498,9 @@
      </property>
     </widget>
     <widget class="QComboBox" name="logTimeIntervalComboBox">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>350</x>
@@ -551,6 +563,9 @@
      </property>
     </widget>
     <widget class="QComboBox" name="logSavePathComboBox">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>350</x>
@@ -1051,9 +1066,6 @@
      <string/>
     </property>
    </widget>
-   <zorder>returnMainButton_2</zorder>
-   <zorder>logoButton_2</zorder>
-   <zorder>settingTabWidget</zorder>
   </widget>
   <zorder>baseFrame</zorder>
   <zorder>settingLabel</zorder>
