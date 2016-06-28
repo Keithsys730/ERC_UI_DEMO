@@ -1024,7 +1024,7 @@
    <widget class="QPushButton" name="returnMainButton_2">
     <property name="geometry">
      <rect>
-      <x>120</x>
+      <x>720</x>
       <y>10</y>
       <width>60</width>
       <height>60</height>

@@ -312,7 +312,7 @@ color: rgb(248, 15, 15);</string>
       </font>
      </property>
      <property name="focusPolicy">
-      <enum>Qt::WheelFocus</enum>
+      <enum>Qt::StrongFocus</enum>
      </property>
      <property name="styleSheet">
       <string notr="true">border-radius:3px; 
@@ -469,7 +469,7 @@ background-color: rgb(29, 255, 51);</string>
       </font>
      </property>
      <property name="focusPolicy">
-      <enum>Qt::WheelFocus</enum>
+      <enum>Qt::StrongFocus</enum>
      </property>
      <property name="styleSheet">
       <string notr="true">border-radius:3px; 
