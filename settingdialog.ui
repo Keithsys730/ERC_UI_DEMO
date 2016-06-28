@@ -37,10 +37,10 @@
   <widget class="QTabWidget" name="settingTabWidget">
    <property name="geometry">
     <rect>
-     <x>5</x>
-     <y>65</y>
-     <width>790</width>
-     <height>410</height>
+     <x>50</x>
+     <y>90</y>
+     <width>700</width>
+     <height>360</height>
     </rect>
    </property>
    <property name="font">
@@ -61,7 +61,7 @@
     <enum>QTabWidget::Rounded</enum>
    </property>
    <property name="currentIndex">
-    <number>5</number>
+    <number>0</number>
    </property>
    <property name="elideMode">
     <enum>Qt::ElideLeft</enum>
@@ -73,7 +73,7 @@
     <widget class="QRadioButton" name="ccRadioButton">
      <property name="geometry">
       <rect>
-       <x>290</x>
+       <x>200</x>
        <y>50</y>
        <width>120</width>
        <height>40</height>
@@ -97,7 +97,7 @@
     <widget class="QRadioButton" name="cpRadioButton">
      <property name="geometry">
       <rect>
-       <x>430</x>
+       <x>350</x>
        <y>50</y>
        <width>120</width>
        <height>40</height>
@@ -121,8 +121,8 @@
     <widget class="QLabel" name="setCurrentLabel">
      <property name="geometry">
       <rect>
-       <x>240</x>
-       <y>140</y>
+       <x>190</x>
+       <y>125</y>
        <width>150</width>
        <height>30</height>
       </rect>
@@ -142,8 +142,8 @@
     <widget class="QLineEdit" name="setCurrentLineEdit">
      <property name="geometry">
       <rect>
-       <x>400</x>
-       <y>125</y>
+       <x>350</x>
+       <y>110</y>
        <width>131</width>
        <height>61</height>
       </rect>
@@ -175,8 +175,8 @@
      </property>
      <property name="geometry">
       <rect>
-       <x>400</x>
-       <y>220</y>
+       <x>350</x>
+       <y>205</y>
        <width>131</width>
        <height>61</height>
       </rect>
@@ -205,8 +205,8 @@
      </property>
      <property name="geometry">
       <rect>
-       <x>240</x>
-       <y>235</y>
+       <x>190</x>
+       <y>220</y>
        <width>150</width>
        <height>30</height>
       </rect>
@@ -231,8 +231,8 @@
     <widget class="QLabel" name="relayNumberLabel">
      <property name="geometry">
       <rect>
-       <x>230</x>
-       <y>50</y>
+       <x>190</x>
+       <y>40</y>
        <width>80</width>
        <height>40</height>
       </rect>
@@ -253,7 +253,7 @@
      <property name="geometry">
       <rect>
        <x>360</x>
-       <y>50</y>
+       <y>40</y>
        <width>100</width>
        <height>40</height>
       </rect>
@@ -273,8 +273,8 @@
     <widget class="QLabel" name="relay1Label">
      <property name="geometry">
       <rect>
-       <x>230</x>
-       <y>110</y>
+       <x>190</x>
+       <y>100</y>
        <width>80</width>
        <height>40</height>
       </rect>
@@ -294,8 +294,8 @@
     <widget class="QLabel" name="relay2Label">
      <property name="geometry">
       <rect>
-       <x>230</x>
-       <y>180</y>
+       <x>190</x>
+       <y>170</y>
        <width>80</width>
        <height>40</height>
       </rect>
@@ -315,8 +315,8 @@
     <widget class="QLabel" name="relay3Label">
      <property name="geometry">
       <rect>
-       <x>230</x>
-       <y>250</y>
+       <x>190</x>
+       <y>240</y>
        <width>80</width>
        <height>40</height>
       </rect>
@@ -336,19 +336,34 @@
     <widget class="QComboBox" name="relay1TriggerComboBox">
      <property name="geometry">
       <rect>
-       <x>360</x>
-       <y>110</y>
+       <x>320</x>
+       <y>100</y>
        <width>200</width>
-       <height>40</height>
+       <height>39</height>
       </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>200</width>
+       <height>330</height>
+      </size>
      </property>
      <property name="font">
       <font>
        <pointsize>18</pointsize>
       </font>
      </property>
+     <property name="focusPolicy">
+      <enum>Qt::NoFocus</enum>
+     </property>
      <property name="currentText">
-      <string>None</string>
+      <string>Power Off</string>
      </property>
      <property name="maxVisibleItems">
       <number>5</number>
@@ -358,44 +373,33 @@
      </property>
      <property name="insertPolicy">
       <enum>QComboBox::NoInsert</enum>
+     </property>
+     <property name="sizeAdjustPolicy">
+      <enum>QComboBox::AdjustToMinimumContentsLengthWithIcon</enum>
      </property>
      <property name="frame">
       <bool>true</bool>
      </property>
      <item>
       <property name="text">
-       <string>None</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Power On</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
        <string>Power Off</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Error : OVP</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Error : Disconnect</string>
       </property>
      </item>
     </widget>
     <widget class="QComboBox" name="relay2TriggerComboBox">
      <property name="geometry">
       <rect>
-       <x>360</x>
-       <y>180</y>
+       <x>320</x>
+       <y>170</y>
        <width>201</width>
        <height>43</height>
       </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
      </property>
      <property name="font">
       <font>
@@ -403,7 +407,7 @@
       </font>
      </property>
      <property name="currentText">
-      <string>None</string>
+      <string>Error : Disconnect</string>
      </property>
      <property name="maxVisibleItems">
       <number>5</number>
@@ -414,26 +418,6 @@
      <property name="insertPolicy">
       <enum>QComboBox::NoInsert</enum>
      </property>
-     <item>
-      <property name="text">
-       <string>None</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Power On</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Power Off</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Error : OVP</string>
-      </property>
-     </item>
      <item>
       <property name="text">
        <string>Error : Disconnect</string>
@@ -443,11 +427,17 @@
     <widget class="QComboBox" name="relay3TriggerComboBox">
      <property name="geometry">
       <rect>
-       <x>360</x>
-       <y>250</y>
+       <x>320</x>
+       <y>240</y>
        <width>200</width>
        <height>40</height>
       </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
      </property>
      <property name="font">
       <font>
@@ -469,26 +459,6 @@
      <item>
       <property name="text">
        <string>None</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Power On</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Power Off</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Error : OVP</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Error : Disconnect</string>
       </property>
      </item>
     </widget>
@@ -500,8 +470,8 @@
     <widget class="QLabel" name="logTimeIntervalLabel">
      <property name="geometry">
       <rect>
-       <x>210</x>
-       <y>70</y>
+       <x>150</x>
+       <y>50</y>
        <width>170</width>
        <height>40</height>
       </rect>
@@ -521,11 +491,17 @@
     <widget class="QComboBox" name="logTimeIntervalComboBox">
      <property name="geometry">
       <rect>
-       <x>410</x>
-       <y>70</y>
+       <x>350</x>
+       <y>50</y>
        <width>151</width>
        <height>40</height>
       </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
      </property>
      <property name="font">
       <font>
@@ -536,7 +512,7 @@
       <string>1 min</string>
      </property>
      <property name="currentIndex">
-      <number>3</number>
+      <number>0</number>
      </property>
      <property name="maxVisibleItems">
       <number>5</number>
@@ -549,50 +525,15 @@
      </property>
      <item>
       <property name="text">
-       <string>10 sec</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>20 sec</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>30 sec</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
        <string>1 min</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>2 mins</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>3 mins</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>5 mins</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>10 mins</string>
       </property>
      </item>
     </widget>
     <widget class="QLabel" name="logSavePathLabel">
      <property name="geometry">
       <rect>
-       <x>210</x>
-       <y>150</y>
+       <x>150</x>
+       <y>130</y>
        <width>170</width>
        <height>40</height>
       </rect>
@@ -612,11 +553,17 @@
     <widget class="QComboBox" name="logSavePathComboBox">
      <property name="geometry">
       <rect>
-       <x>410</x>
-       <y>150</y>
+       <x>350</x>
+       <y>130</y>
        <width>151</width>
        <height>40</height>
       </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
      </property>
      <property name="font">
       <font>
@@ -644,8 +591,8 @@
     <widget class="QLabel" name="logStorageLabel">
      <property name="geometry">
       <rect>
-       <x>210</x>
-       <y>230</y>
+       <x>150</x>
+       <y>210</y>
        <width>170</width>
        <height>40</height>
       </rect>
@@ -665,8 +612,8 @@
     <widget class="QLabel" name="logStorageUsedLabel">
      <property name="geometry">
       <rect>
-       <x>410</x>
-       <y>230</y>
+       <x>350</x>
+       <y>210</y>
        <width>300</width>
        <height>40</height>
       </rect>
@@ -691,8 +638,8 @@
     <widget class="QDateEdit" name="dateEdit">
      <property name="geometry">
       <rect>
-       <x>160</x>
-       <y>150</y>
+       <x>110</x>
+       <y>130</y>
        <width>250</width>
        <height>50</height>
       </rect>
@@ -701,6 +648,9 @@
       <font>
        <pointsize>24</pointsize>
       </font>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::ClickFocus</enum>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -743,8 +693,8 @@
     <widget class="QTimeEdit" name="timeEdit">
      <property name="geometry">
       <rect>
-       <x>430</x>
-       <y>150</y>
+       <x>380</x>
+       <y>130</y>
        <width>200</width>
        <height>50</height>
       </rect>
@@ -753,6 +703,9 @@
       <font>
        <pointsize>24</pointsize>
       </font>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::ClickFocus</enum>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -779,8 +732,8 @@
     <widget class="QLineEdit" name="setIPLineEdit">
      <property name="geometry">
       <rect>
-       <x>320</x>
-       <y>55</y>
+       <x>280</x>
+       <y>30</y>
        <width>300</width>
        <height>40</height>
       </rect>
@@ -789,6 +742,9 @@
       <font>
        <pointsize>24</pointsize>
       </font>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::ClickFocus</enum>
      </property>
      <property name="styleSheet">
       <string notr="true"/>
@@ -806,8 +762,8 @@
     <widget class="QLabel" name="setIPLabel">
      <property name="geometry">
       <rect>
-       <x>160</x>
-       <y>55</y>
+       <x>120</x>
+       <y>30</y>
        <width>160</width>
        <height>40</height>
       </rect>
@@ -827,8 +783,8 @@
     <widget class="QLabel" name="setMaskLabel">
      <property name="geometry">
       <rect>
-       <x>160</x>
-       <y>125</y>
+       <x>120</x>
+       <y>100</y>
        <width>160</width>
        <height>40</height>
       </rect>
@@ -848,8 +804,8 @@
     <widget class="QLineEdit" name="setMaskLineEdit">
      <property name="geometry">
       <rect>
-       <x>320</x>
-       <y>125</y>
+       <x>280</x>
+       <y>100</y>
        <width>300</width>
        <height>40</height>
       </rect>
@@ -858,6 +814,9 @@
       <font>
        <pointsize>24</pointsize>
       </font>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::ClickFocus</enum>
      </property>
      <property name="styleSheet">
       <string notr="true"/>
@@ -875,8 +834,8 @@
     <widget class="QLabel" name="setGatewayLabel">
      <property name="geometry">
       <rect>
-       <x>160</x>
-       <y>195</y>
+       <x>120</x>
+       <y>170</y>
        <width>160</width>
        <height>40</height>
       </rect>
@@ -896,8 +855,8 @@
     <widget class="QLineEdit" name="setGatewayLineEdit">
      <property name="geometry">
       <rect>
-       <x>320</x>
-       <y>195</y>
+       <x>280</x>
+       <y>170</y>
        <width>300</width>
        <height>40</height>
       </rect>
@@ -906,6 +865,9 @@
       <font>
        <pointsize>24</pointsize>
       </font>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::ClickFocus</enum>
      </property>
      <property name="styleSheet">
       <string notr="true"/>
@@ -923,8 +885,8 @@
     <widget class="QLabel" name="setDNSLabel">
      <property name="geometry">
       <rect>
-       <x>160</x>
-       <y>265</y>
+       <x>120</x>
+       <y>240</y>
        <width>160</width>
        <height>40</height>
       </rect>
@@ -944,8 +906,8 @@
     <widget class="QLineEdit" name="setDNSLineEdit">
      <property name="geometry">
       <rect>
-       <x>320</x>
-       <y>265</y>
+       <x>280</x>
+       <y>240</y>
        <width>300</width>
        <height>40</height>
       </rect>
@@ -954,6 +916,9 @@
       <font>
        <pointsize>24</pointsize>
       </font>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::ClickFocus</enum>
      </property>
      <property name="styleSheet">
       <string notr="true"/>
@@ -976,8 +941,8 @@
     <widget class="QRadioButton" name="csRadioButton">
      <property name="geometry">
       <rect>
-       <x>250</x>
-       <y>70</y>
+       <x>240</x>
+       <y>80</y>
        <width>300</width>
        <height>40</height>
       </rect>
@@ -1000,8 +965,8 @@
     <widget class="QRadioButton" name="ctRadioButton">
      <property name="geometry">
       <rect>
-       <x>250</x>
-       <y>150</y>
+       <x>240</x>
+       <y>180</y>
        <width>300</width>
        <height>40</height>
       </rect>
@@ -1021,47 +986,7 @@
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QRadioButton" name="enRadioButton">
-     <property name="geometry">
-      <rect>
-       <x>250</x>
-       <y>220</y>
-       <width>300</width>
-       <height>40</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>24</pointsize>
-      </font>
-     </property>
-     <property name="focusPolicy">
-      <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="text">
-      <string>English</string>
-     </property>
-     <property name="checked">
-      <bool>false</bool>
-     </property>
-    </widget>
    </widget>
-  </widget>
-  <widget class="QPushButton" name="returnMainButton">
-   <property name="geometry">
-    <rect>
-     <x>5</x>
-     <y>5</y>
-     <width>100</width>
-     <height>60</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border-image: url(:/buttonphotos/Meanwell.png);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
   </widget>
   <widget class="QFrame" name="baseFrame">
    <property name="geometry">
@@ -1081,11 +1006,58 @@
    <property name="frameShadow">
     <enum>QFrame::Raised</enum>
    </property>
+   <widget class="QPushButton" name="returnMainButton_2">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>10</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/buttonphotos/home.png);
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="logoButton_2">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>15</x>
+      <y>10</y>
+      <width>100</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/buttonphotos/Meanwell.png);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <zorder>returnMainButton_2</zorder>
+   <zorder>logoButton_2</zorder>
+   <zorder>settingTabWidget</zorder>
   </widget>
   <zorder>baseFrame</zorder>
   <zorder>settingLabel</zorder>
   <zorder>settingTabWidget</zorder>
-  <zorder>returnMainButton</zorder>
  </widget>
  <resources/>
  <connections/>

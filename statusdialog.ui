@@ -34,22 +34,6 @@
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QPushButton" name="returnMainButton">
-   <property name="geometry">
-    <rect>
-     <x>5</x>
-     <y>5</y>
-     <width>100</width>
-     <height>60</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border-image: url(:/buttonphotos/Meanwell.png);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
   <widget class="QFrame" name="baseFrame">
    <property name="geometry">
     <rect>
@@ -307,7 +291,7 @@
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true"/>
+       <string notr="true">background-color: rgb(29, 255, 51);</string>
       </property>
       <property name="frameShape">
        <enum>QFrame::Panel</enum>
@@ -372,6 +356,9 @@
         <width>150</width>
         <height>80</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(29, 255, 51);</string>
       </property>
       <property name="frameShape">
        <enum>QFrame::Panel</enum>
@@ -458,6 +445,9 @@
         <height>80</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(29, 255, 51);</string>
+      </property>
       <property name="frameShape">
        <enum>QFrame::Panel</enum>
       </property>
@@ -522,6 +512,9 @@
         <height>80</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(29, 255, 51);</string>
+      </property>
       <property name="frameShape">
        <enum>QFrame::Panel</enum>
       </property>
@@ -585,6 +578,9 @@
         <width>150</width>
         <height>80</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(29, 255, 51);</string>
       </property>
       <property name="frameShape">
        <enum>QFrame::Panel</enum>
@@ -881,7 +877,7 @@
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true"/>
+       <string notr="true">background-color: rgb(29, 255, 51);</string>
       </property>
       <property name="frameShape">
        <enum>QFrame::Panel</enum>
@@ -1035,6 +1031,9 @@
         <height>80</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(29, 255, 51);</string>
+      </property>
       <property name="frameShape">
        <enum>QFrame::Panel</enum>
       </property>
@@ -1098,6 +1097,9 @@
         <width>150</width>
         <height>80</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(29, 255, 51);</string>
       </property>
       <property name="frameShape">
        <enum>QFrame::Panel</enum>
@@ -1554,6 +1556,9 @@
         <height>80</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(29, 255, 51);</string>
+      </property>
       <property name="frameShape">
        <enum>QFrame::Panel</enum>
       </property>
@@ -1706,6 +1711,9 @@
         <height>80</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(29, 255, 51);</string>
+      </property>
       <property name="frameShape">
        <enum>QFrame::Panel</enum>
       </property>
@@ -1769,6 +1777,9 @@
         <width>150</width>
         <height>80</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(29, 255, 51);</string>
       </property>
       <property name="frameShape">
        <enum>QFrame::Panel</enum>
@@ -1854,10 +1865,54 @@
      </widget>
     </widget>
    </widget>
+   <widget class="QPushButton" name="logoButton">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>15</x>
+      <y>10</y>
+      <width>100</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/buttonphotos/Meanwell.png);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="returnMainButton">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>10</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/buttonphotos/home.png);
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
+   </widget>
   </widget>
   <zorder>baseFrame</zorder>
   <zorder>statusLabel</zorder>
-  <zorder>returnMainButton</zorder>
  </widget>
  <resources/>
  <connections/>

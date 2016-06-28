@@ -1,13 +1,15 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QThread>
+#include <QDesktopServices>
+#include <QUrl>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    initialButtonBackgroundColor();
+    //initialButtonBackgroundColor();
 }
 
 MainWindow::~MainWindow()
@@ -26,11 +28,12 @@ void MainWindow::on_burnOffButton_pressed()
     //ui->burnTimeLabel->setText(QString::number(0));
     if(ui->burnOffButton->isChecked())
     {
-        //ui->burnOffButton->setStyleSheet("background-color: none");
+
     }
     else
     {
-        //ui->burnOffButton->setStyleSheet("background-color: none");
+        ui->burnOffButton->setStyleSheet("background-color: #00F718");
+        ui->burnOnButton->setStyleSheet("background-color: #FC0630");
     }
 }
 
@@ -52,6 +55,12 @@ void MainWindow::on_burnOnButton_pressed()
             }
         }
         */
+        ui->burnOnButton->setStyleSheet("background-color: #00F718");
+        ui->burnOffButton->setStyleSheet("background-color: #FC0630");
+    }
+    else
+    {
+
     }
 
 }
@@ -115,3 +124,8 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
     ui->burnTimeLabel->setText(QString::number(startPressX));
 }
 */
+
+void MainWindow::on_websiteButton_clicked()
+{
+    QDesktopServices::openUrl(QUrl("http://www.meanwell.com"));
+}

@@ -13,11 +13,14 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QPushButton" name="returnMainButton">
+  <widget class="QPushButton" name="logoButton">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="geometry">
     <rect>
-     <x>5</x>
-     <y>5</y>
+     <x>15</x>
+     <y>10</y>
      <width>100</width>
      <height>60</height>
     </rect>
@@ -63,6 +66,9 @@
     <enum>Qt::DefaultContextMenu</enum>
    </property>
    <property name="acceptDrops">
+    <bool>false</bool>
+   </property>
+   <property name="autoFillBackground">
     <bool>false</bool>
    </property>
    <property name="frameShape">
@@ -206,7 +212,7 @@
       </font>
      </property>
      <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:20pt; font-weight:600;&quot;&gt;ERC burn-in devices monitor&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;Version : 1.0&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;This could monitors the burn-in devices.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;For detailed information, please refer to:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;http://www.meanwell.com&quot;&gt;&lt;span style=&quot; font-size:16pt; text-decoration: underline; color:#0000ff;&quot;&gt;http://www.meanwell.com&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;copyright @ 2016 MEAN WELL Enterprises Co., Ltd.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:20pt; font-weight:600;&quot;&gt;ERC&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:20pt; font-weight:600;&quot;&gt;burn-in system monitor&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;Version : 1.0&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;This could monitors the burn-in system.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;For detailed information, please refer to:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;http://www.meanwell.com&quot;&gt;&lt;span style=&quot; font-size:16pt; text-decoration: underline; color:#0000ff;&quot;&gt;http://www.meanwell.com&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;copyright @ 2016 MEAN WELL Enterprises Co., Ltd.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -259,9 +265,35 @@
    <property name="frameShadow">
     <enum>QFrame::Raised</enum>
    </property>
+   <widget class="QPushButton" name="returnMainButton">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>10</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/buttonphotos/home.png);
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
+   </widget>
   </widget>
   <zorder>baseFrame</zorder>
-  <zorder>returnMainButton</zorder>
+  <zorder>logoButton</zorder>
   <zorder>informationLabel</zorder>
   <zorder>InformationStackedWidget</zorder>
  </widget>

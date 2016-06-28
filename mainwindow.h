@@ -25,6 +25,7 @@ private slots:
     void on_logButton_clicked();
     void on_informationButton_clicked();
     void receiveShow();
+    void on_websiteButton_clicked();
 
 private:
     Ui::MainWindow *ui;

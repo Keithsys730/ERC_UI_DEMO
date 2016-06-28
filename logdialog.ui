@@ -13,22 +13,6 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QPushButton" name="returnMainButton">
-   <property name="geometry">
-    <rect>
-     <x>5</x>
-     <y>5</y>
-     <width>100</width>
-     <height>60</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border-image: url(:/buttonphotos/Meanwell.png);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
   <widget class="QLabel" name="logLabel">
    <property name="geometry">
     <rect>
@@ -54,9 +38,9 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>120</y>
+     <y>79</y>
      <width>780</width>
-     <height>350</height>
+     <height>391</height>
     </rect>
    </property>
    <property name="font">
@@ -77,14 +61,101 @@
     <attribute name="title">
      <string>Data</string>
     </attribute>
-    <widget class="QListWidget" name="dataListWidget">
+    <widget class="QTableWidget" name="tableWidget">
      <property name="geometry">
       <rect>
-       <x>5</x>
-       <y>5</y>
-       <width>730</width>
-       <height>335</height>
+       <x>10</x>
+       <y>51</y>
+       <width>711</width>
+       <height>331</height>
       </rect>
+     </property>
+     <attribute name="horizontalHeaderDefaultSectionSize">
+      <number>140</number>
+     </attribute>
+     <column>
+      <property name="text">
+       <string>ERM</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Status</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Current(A)</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Volatge(V)</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Time</string>
+      </property>
+     </column>
+    </widget>
+    <widget class="QComboBox" name="ersIndexComboBox">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>10</y>
+       <width>83</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>18</pointsize>
+      </font>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <property name="maxVisibleItems">
+      <number>7</number>
+     </property>
+     <property name="maxCount">
+      <number>32</number>
+     </property>
+     <property name="insertPolicy">
+      <enum>QComboBox::NoInsert</enum>
+     </property>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="ersIndexLabel">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>5</y>
+       <width>100</width>
+       <height>35</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>24</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>ERS</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
    </widget>
@@ -92,225 +163,35 @@
     <attribute name="title">
      <string>Event</string>
     </attribute>
-    <widget class="QListWidget" name="eventListWidget">
+    <widget class="QTableWidget" name="tableWidget_2">
      <property name="geometry">
       <rect>
-       <x>5</x>
-       <y>5</y>
-       <width>730</width>
-       <height>335</height>
+       <x>10</x>
+       <y>10</y>
+       <width>711</width>
+       <height>371</height>
       </rect>
      </property>
+     <attribute name="horizontalHeaderDefaultSectionSize">
+      <number>230</number>
+     </attribute>
+     <column>
+      <property name="text">
+       <string>Time</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Device</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>New Column</string>
+      </property>
+     </column>
     </widget>
    </widget>
-  </widget>
-  <widget class="QLabel" name="ersIndexLabel">
-   <property name="geometry">
-    <rect>
-     <x>80</x>
-     <y>75</y>
-     <width>100</width>
-     <height>35</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>24</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>ERS</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QComboBox" name="ersIndexComboBox">
-   <property name="geometry">
-    <rect>
-     <x>180</x>
-     <y>80</y>
-     <width>83</width>
-     <height>29</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>18</pointsize>
-    </font>
-   </property>
-   <property name="currentIndex">
-    <number>22</number>
-   </property>
-   <property name="maxVisibleItems">
-    <number>7</number>
-   </property>
-   <property name="maxCount">
-    <number>32</number>
-   </property>
-   <property name="insertPolicy">
-    <enum>QComboBox::NoInsert</enum>
-   </property>
-   <item>
-    <property name="text">
-     <string>0</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>1</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>2</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>3</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>4</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>5</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>6</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>7</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>8</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>9</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>10</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>11</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>12</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>13</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>14</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>15</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>16</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>17</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>18</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>19</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>20</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>21</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>22</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>23</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>24</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>25</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>26</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>27</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>28</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>29</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>30</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>31</string>
-    </property>
-   </item>
   </widget>
   <widget class="QFrame" name="baseFrame">
    <property name="geometry">
@@ -330,13 +211,55 @@
    <property name="frameShadow">
     <enum>QFrame::Raised</enum>
    </property>
+   <widget class="QPushButton" name="logoButton">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>15</x>
+      <y>10</y>
+      <width>100</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/buttonphotos/Meanwell.png);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="returnMainButton">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>10</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/buttonphotos/home.png);
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
+   </widget>
   </widget>
   <zorder>baseFrame</zorder>
-  <zorder>returnMainButton</zorder>
   <zorder>logLabel</zorder>
   <zorder>logTabWidget</zorder>
-  <zorder>ersIndexLabel</zorder>
-  <zorder>ersIndexComboBox</zorder>
  </widget>
  <resources/>
  <connections/>

@@ -18,7 +18,7 @@ void SettingDialog::receiveShow()
     this->show();
 }
 
-void SettingDialog::on_returnMainButton_clicked()
+void SettingDialog::on_returnMainButton_2_clicked()
 {
     emit showMainPage();
     this->hide();
