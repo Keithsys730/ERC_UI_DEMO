@@ -50,551 +50,6 @@
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="ersLabel">
-   <property name="geometry">
-    <rect>
-     <x>320</x>
-     <y>100</y>
-     <width>160</width>
-     <height>50</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>32</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>ERS 22</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QFrame" name="erm1Frame">
-   <property name="geometry">
-    <rect>
-     <x>70</x>
-     <y>170</y>
-     <width>150</width>
-     <height>80</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true"/>
-   </property>
-   <property name="frameShape">
-    <enum>QFrame::Panel</enum>
-   </property>
-   <property name="frameShadow">
-    <enum>QFrame::Plain</enum>
-   </property>
-   <property name="lineWidth">
-    <number>3</number>
-   </property>
-   <widget class="QLabel" name="erm1Label">
-    <property name="geometry">
-     <rect>
-      <x>15</x>
-      <y>5</y>
-      <width>47</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>ERM 1</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="erm1currentLabel">
-    <property name="geometry">
-     <rect>
-      <x>45</x>
-      <y>25</y>
-      <width>60</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>30.5 A</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="erm1voltageLabel">
-    <property name="geometry">
-     <rect>
-      <x>45</x>
-      <y>50</y>
-      <width>60</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>22.5 V</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-  </widget>
-  <widget class="QFrame" name="erm2Frame">
-   <property name="geometry">
-    <rect>
-     <x>240</x>
-     <y>170</y>
-     <width>150</width>
-     <height>80</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(249, 92, 119);</string>
-   </property>
-   <property name="frameShape">
-    <enum>QFrame::Panel</enum>
-   </property>
-   <property name="frameShadow">
-    <enum>QFrame::Plain</enum>
-   </property>
-   <property name="lineWidth">
-    <number>3</number>
-   </property>
-   <widget class="QLabel" name="erm2Label">
-    <property name="geometry">
-     <rect>
-      <x>15</x>
-      <y>5</y>
-      <width>47</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>ERM 2</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="erm2currentLabel">
-    <property name="geometry">
-     <rect>
-      <x>45</x>
-      <y>25</y>
-      <width>60</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>30.5 A</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="erm2voltageLabel">
-    <property name="geometry">
-     <rect>
-      <x>45</x>
-      <y>50</y>
-      <width>60</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>22.5 V</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-  </widget>
-  <widget class="QFrame" name="erm3Frame">
-   <property name="geometry">
-    <rect>
-     <x>410</x>
-     <y>170</y>
-     <width>150</width>
-     <height>80</height>
-    </rect>
-   </property>
-   <property name="frameShape">
-    <enum>QFrame::Panel</enum>
-   </property>
-   <property name="frameShadow">
-    <enum>QFrame::Plain</enum>
-   </property>
-   <property name="lineWidth">
-    <number>3</number>
-   </property>
-   <widget class="QLabel" name="erm3Label">
-    <property name="geometry">
-     <rect>
-      <x>15</x>
-      <y>5</y>
-      <width>47</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>ERM 3</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="erm3currentLabel">
-    <property name="geometry">
-     <rect>
-      <x>45</x>
-      <y>25</y>
-      <width>60</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>30.5 A</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="erm3voltageLabel">
-    <property name="geometry">
-     <rect>
-      <x>45</x>
-      <y>50</y>
-      <width>60</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>22.5 V</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-  </widget>
-  <widget class="QFrame" name="erm4Frame">
-   <property name="geometry">
-    <rect>
-     <x>580</x>
-     <y>170</y>
-     <width>150</width>
-     <height>80</height>
-    </rect>
-   </property>
-   <property name="frameShape">
-    <enum>QFrame::Panel</enum>
-   </property>
-   <property name="frameShadow">
-    <enum>QFrame::Plain</enum>
-   </property>
-   <property name="lineWidth">
-    <number>3</number>
-   </property>
-   <widget class="QLabel" name="erm4Label">
-    <property name="geometry">
-     <rect>
-      <x>15</x>
-      <y>5</y>
-      <width>47</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>ERM 4</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="erm4currentLabel">
-    <property name="geometry">
-     <rect>
-      <x>45</x>
-      <y>25</y>
-      <width>60</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>30.5 A</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="erm4voltageLabel">
-    <property name="geometry">
-     <rect>
-      <x>45</x>
-      <y>50</y>
-      <width>60</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>22.5 V</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-  </widget>
-  <widget class="QFrame" name="erm8Frame">
-   <property name="geometry">
-    <rect>
-     <x>580</x>
-     <y>290</y>
-     <width>150</width>
-     <height>80</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(187, 193, 197);</string>
-   </property>
-   <property name="frameShape">
-    <enum>QFrame::Panel</enum>
-   </property>
-   <property name="frameShadow">
-    <enum>QFrame::Plain</enum>
-   </property>
-   <property name="lineWidth">
-    <number>3</number>
-   </property>
-   <widget class="QLabel" name="erm8Label">
-    <property name="geometry">
-     <rect>
-      <x>15</x>
-      <y>5</y>
-      <width>47</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>ERM 8</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="erm8currentLabel">
-    <property name="geometry">
-     <rect>
-      <x>45</x>
-      <y>25</y>
-      <width>60</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>30.5 A</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="erm8voltageLabel">
-    <property name="geometry">
-     <rect>
-      <x>45</x>
-      <y>50</y>
-      <width>60</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>22.5 V</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-  </widget>
-  <widget class="QFrame" name="erm5Frame">
-   <property name="geometry">
-    <rect>
-     <x>70</x>
-     <y>290</y>
-     <width>150</width>
-     <height>80</height>
-    </rect>
-   </property>
-   <property name="frameShape">
-    <enum>QFrame::Panel</enum>
-   </property>
-   <property name="frameShadow">
-    <enum>QFrame::Plain</enum>
-   </property>
-   <property name="lineWidth">
-    <number>3</number>
-   </property>
-   <widget class="QLabel" name="erm5Label">
-    <property name="geometry">
-     <rect>
-      <x>15</x>
-      <y>5</y>
-      <width>47</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>ERM 5</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="erm5currentLabel">
-    <property name="geometry">
-     <rect>
-      <x>45</x>
-      <y>25</y>
-      <width>60</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>30.5 A</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="erm5voltageLabel">
-    <property name="geometry">
-     <rect>
-      <x>45</x>
-      <y>50</y>
-      <width>60</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>22.5 V</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-  </widget>
-  <widget class="QFrame" name="erm6Frame">
-   <property name="geometry">
-    <rect>
-     <x>240</x>
-     <y>290</y>
-     <width>150</width>
-     <height>80</height>
-    </rect>
-   </property>
-   <property name="frameShape">
-    <enum>QFrame::Panel</enum>
-   </property>
-   <property name="frameShadow">
-    <enum>QFrame::Plain</enum>
-   </property>
-   <property name="lineWidth">
-    <number>3</number>
-   </property>
-   <widget class="QLabel" name="erm6Label">
-    <property name="geometry">
-     <rect>
-      <x>15</x>
-      <y>5</y>
-      <width>47</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>ERM 6</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="erm6currentLabel">
-    <property name="geometry">
-     <rect>
-      <x>45</x>
-      <y>25</y>
-      <width>60</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>30.5 A</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="erm6voltageLabel">
-    <property name="geometry">
-     <rect>
-      <x>45</x>
-      <y>50</y>
-      <width>60</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>22.5 V</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-  </widget>
-  <widget class="QFrame" name="erm7Frame">
-   <property name="geometry">
-    <rect>
-     <x>410</x>
-     <y>290</y>
-     <width>150</width>
-     <height>80</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(187, 193, 197);</string>
-   </property>
-   <property name="frameShape">
-    <enum>QFrame::Panel</enum>
-   </property>
-   <property name="frameShadow">
-    <enum>QFrame::Plain</enum>
-   </property>
-   <property name="lineWidth">
-    <number>3</number>
-   </property>
-   <widget class="QLabel" name="erm7Label">
-    <property name="geometry">
-     <rect>
-      <x>15</x>
-      <y>5</y>
-      <width>47</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>ERM 7</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="erm7currentLabel">
-    <property name="geometry">
-     <rect>
-      <x>45</x>
-      <y>25</y>
-      <width>60</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>30.5 A</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="erm7voltageLabel">
-    <property name="geometry">
-     <rect>
-      <x>45</x>
-      <y>50</y>
-      <width>60</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>22.5 V</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-  </widget>
   <widget class="QFrame" name="baseFrame">
    <property name="geometry">
     <rect>
@@ -613,19 +68,1796 @@
    <property name="frameShadow">
     <enum>QFrame::Raised</enum>
    </property>
+   <widget class="QStackedWidget" name="statusStackedWidget">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>80</y>
+      <width>790</width>
+      <height>390</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: none;</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <property name="lineWidth">
+     <number>0</number>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="ers22Page">
+     <widget class="QFrame" name="erm2Frame">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>120</y>
+        <width>150</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(249, 92, 119);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>3</number>
+      </property>
+      <widget class="QLabel" name="erm2Label_3">
+       <property name="geometry">
+        <rect>
+         <x>15</x>
+         <y>5</y>
+         <width>47</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>ERM 2</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="erm2currentLabel_3">
+       <property name="geometry">
+        <rect>
+         <x>45</x>
+         <y>25</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>30.5 A</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="erm2voltageLabel_3">
+       <property name="geometry">
+        <rect>
+         <x>45</x>
+         <y>50</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>22.5 V</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="erm7Frame">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>240</y>
+        <width>150</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(187, 193, 197);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>3</number>
+      </property>
+      <widget class="QLabel" name="erm7Label_3">
+       <property name="geometry">
+        <rect>
+         <x>15</x>
+         <y>5</y>
+         <width>47</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>ERM 7</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="erm7currentLabel_3">
+       <property name="geometry">
+        <rect>
+         <x>45</x>
+         <y>25</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>30.5 A</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="erm7voltageLabel_3">
+       <property name="geometry">
+        <rect>
+         <x>45</x>
+         <y>50</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>22.5 V</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="erm8Frame">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>240</y>
+        <width>150</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(187, 193, 197);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>3</number>
+      </property>
+      <widget class="QLabel" name="erm8Label_3">
+       <property name="geometry">
+        <rect>
+         <x>15</x>
+         <y>5</y>
+         <width>47</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>ERM 8</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="erm8currentLabel_3">
+       <property name="geometry">
+        <rect>
+         <x>45</x>
+         <y>25</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>30.5 A</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="erm8voltageLabel_3">
+       <property name="geometry">
+        <rect>
+         <x>45</x>
+         <y>50</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>22.5 V</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="erm1Frame">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>120</y>
+        <width>150</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>3</number>
+      </property>
+      <widget class="QLabel" name="erm1Label_3">
+       <property name="geometry">
+        <rect>
+         <x>15</x>
+         <y>5</y>
+         <width>47</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>ERM 1</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="erm1currentLabel_3">
+       <property name="geometry">
+        <rect>
+         <x>45</x>
+         <y>25</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>30.5 A</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="erm1voltageLabel_3">
+       <property name="geometry">
+        <rect>
+         <x>45</x>
+         <y>50</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>22.5 V</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="erm5Frame">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>240</y>
+        <width>150</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>3</number>
+      </property>
+      <widget class="QLabel" name="erm5Label_3">
+       <property name="geometry">
+        <rect>
+         <x>15</x>
+         <y>5</y>
+         <width>47</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>ERM 5</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="erm5currentLabel_3">
+       <property name="geometry">
+        <rect>
+         <x>45</x>
+         <y>25</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>30.5 A</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="erm5voltageLabel_3">
+       <property name="geometry">
+        <rect>
+         <x>45</x>
+         <y>50</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>22.5 V</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="ersLabel">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>30</y>
+        <width>160</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>32</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>ERS 22</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QFrame" name="erm6Frame">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>240</y>
+        <width>150</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>3</number>
+      </property>
+      <widget class="QLabel" name="erm6Label_3">
+       <property name="geometry">
+        <rect>
+         <x>15</x>
+         <y>5</y>
+         <width>47</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>ERM 6</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="erm6currentLabel_3">
+       <property name="geometry">
+        <rect>
+         <x>45</x>
+         <y>25</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>30.5 A</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="erm6voltageLabel_3">
+       <property name="geometry">
+        <rect>
+         <x>45</x>
+         <y>50</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>22.5 V</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="erm4Frame">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>120</y>
+        <width>150</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>3</number>
+      </property>
+      <widget class="QLabel" name="erm4Label_3">
+       <property name="geometry">
+        <rect>
+         <x>15</x>
+         <y>5</y>
+         <width>47</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>ERM 4</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="erm4currentLabel_3">
+       <property name="geometry">
+        <rect>
+         <x>45</x>
+         <y>25</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>30.5 A</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="erm4voltageLabel_3">
+       <property name="geometry">
+        <rect>
+         <x>45</x>
+         <y>50</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>22.5 V</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="erm3Frame">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>120</y>
+        <width>150</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>3</number>
+      </property>
+      <widget class="QLabel" name="erm3Label_3">
+       <property name="geometry">
+        <rect>
+         <x>15</x>
+         <y>5</y>
+         <width>47</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>ERM 3</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="erm3currentLabel_3">
+       <property name="geometry">
+        <rect>
+         <x>45</x>
+         <y>25</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>30.5 A</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="erm3voltageLabel_3">
+       <property name="geometry">
+        <rect>
+         <x>45</x>
+         <y>50</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>22.5 V</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="nextPushButton">
+      <property name="geometry">
+       <rect>
+        <x>740</x>
+        <y>180</y>
+        <width>41</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>28</pointsize>
+       </font>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
+      </property>
+      <property name="text">
+       <string>&gt;</string>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="ers23Page">
+     <widget class="QFrame" name="erm2Frame_2">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>120</y>
+        <width>150</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(187, 193, 197);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>3</number>
+      </property>
+      <widget class="QLabel" name="erm2Label_5">
+       <property name="geometry">
+        <rect>
+         <x>15</x>
+         <y>5</y>
+         <width>47</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>ERM 2</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="erm2currentLabel_5">
+       <property name="geometry">
+        <rect>
+         <x>45</x>
+         <y>25</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>30.5 A</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="erm2voltageLabel_5">
+       <property name="geometry">
+        <rect>
+         <x>45</x>
+         <y>50</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>22.5 V</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="erm7Frame_2">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>240</y>
+        <width>150</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(187, 193, 197);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>3</number>
+      </property>
+      <widget class="QLabel" name="erm7Label_5">
+       <property name="geometry">
+        <rect>
+         <x>15</x>
+         <y>5</y>
+         <width>47</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>ERM 7</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="erm7currentLabel_5">
+       <property name="geometry">
+        <rect>
+         <x>45</x>
+         <y>25</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>30.5 A</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="erm7voltageLabel_5">
+       <property name="geometry">
+        <rect>
+         <x>45</x>
+         <y>50</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>22.5 V</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="erm8Frame_2">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>240</y>
+        <width>150</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(187, 193, 197);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>3</number>
+      </property>
+      <widget class="QLabel" name="erm8Label_5">
+       <property name="geometry">
+        <rect>
+         <x>15</x>
+         <y>5</y>
+         <width>47</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>ERM 8</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="erm8currentLabel_5">
+       <property name="geometry">
+        <rect>
+         <x>45</x>
+         <y>25</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>30.5 A</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="erm8voltageLabel_5">
+       <property name="geometry">
+        <rect>
+         <x>45</x>
+         <y>50</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>22.5 V</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="erm1Frame_2">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>120</y>
+        <width>150</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>3</number>
+      </property>
+      <widget class="QLabel" name="erm1Label_5">
+       <property name="geometry">
+        <rect>
+         <x>15</x>
+         <y>5</y>
+         <width>47</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>ERM 1</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="erm1currentLabel_5">
+       <property name="geometry">
+        <rect>
+         <x>45</x>
+         <y>25</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>30.5 A</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="erm1voltageLabel_5">
+       <property name="geometry">
+        <rect>
+         <x>45</x>
+         <y>50</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>22.5 V</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="erm5Frame_2">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>240</y>
+        <width>150</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(187, 193, 197);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>3</number>
+      </property>
+      <widget class="QLabel" name="erm5Label_5">
+       <property name="geometry">
+        <rect>
+         <x>15</x>
+         <y>5</y>
+         <width>47</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>ERM 5</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="erm5currentLabel_5">
+       <property name="geometry">
+        <rect>
+         <x>45</x>
+         <y>25</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>30.5 A</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="erm5voltageLabel_5">
+       <property name="geometry">
+        <rect>
+         <x>45</x>
+         <y>50</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>22.5 V</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="ersLabel_2">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>30</y>
+        <width>160</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>32</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>ERS 23</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QFrame" name="erm6Frame_2">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>240</y>
+        <width>150</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>3</number>
+      </property>
+      <widget class="QLabel" name="erm6Label_5">
+       <property name="geometry">
+        <rect>
+         <x>15</x>
+         <y>5</y>
+         <width>47</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>ERM 6</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="erm6currentLabel_5">
+       <property name="geometry">
+        <rect>
+         <x>45</x>
+         <y>25</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>30.5 A</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="erm6voltageLabel_5">
+       <property name="geometry">
+        <rect>
+         <x>45</x>
+         <y>50</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>22.5 V</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="erm4Frame_2">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>120</y>
+        <width>150</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>3</number>
+      </property>
+      <widget class="QLabel" name="erm4Label_5">
+       <property name="geometry">
+        <rect>
+         <x>15</x>
+         <y>5</y>
+         <width>47</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>ERM 4</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="erm4currentLabel_5">
+       <property name="geometry">
+        <rect>
+         <x>45</x>
+         <y>25</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>30.5 A</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="erm4voltageLabel_5">
+       <property name="geometry">
+        <rect>
+         <x>45</x>
+         <y>50</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>22.5 V</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="erm3Frame_2">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>120</y>
+        <width>150</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(187, 193, 197);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>3</number>
+      </property>
+      <widget class="QLabel" name="erm3Label_5">
+       <property name="geometry">
+        <rect>
+         <x>15</x>
+         <y>5</y>
+         <width>47</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>ERM 3</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="erm3currentLabel_5">
+       <property name="geometry">
+        <rect>
+         <x>45</x>
+         <y>25</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>30.5 A</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="erm3voltageLabel_5">
+       <property name="geometry">
+        <rect>
+         <x>45</x>
+         <y>50</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>22.5 V</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="nextPushButton_2">
+      <property name="geometry">
+       <rect>
+        <x>740</x>
+        <y>180</y>
+        <width>41</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>28</pointsize>
+       </font>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
+      </property>
+      <property name="text">
+       <string>&gt;</string>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="previousPushButton_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>180</y>
+        <width>51</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>28</pointsize>
+       </font>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
+      </property>
+      <property name="text">
+       <string>&lt;</string>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="ers24Page">
+     <widget class="QFrame" name="erm2Frame_3">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>120</y>
+        <width>150</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(249, 92, 119);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>3</number>
+      </property>
+      <widget class="QLabel" name="erm2Label_6">
+       <property name="geometry">
+        <rect>
+         <x>15</x>
+         <y>5</y>
+         <width>47</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>ERM 2</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="erm2currentLabel_6">
+       <property name="geometry">
+        <rect>
+         <x>45</x>
+         <y>25</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>30.5 A</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="erm2voltageLabel_6">
+       <property name="geometry">
+        <rect>
+         <x>45</x>
+         <y>50</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>22.5 V</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="erm7Frame_3">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>240</y>
+        <width>150</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(249, 92, 119);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>3</number>
+      </property>
+      <widget class="QLabel" name="erm7Label_6">
+       <property name="geometry">
+        <rect>
+         <x>15</x>
+         <y>5</y>
+         <width>47</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>ERM 7</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="erm7currentLabel_6">
+       <property name="geometry">
+        <rect>
+         <x>45</x>
+         <y>25</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>30.5 A</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="erm7voltageLabel_6">
+       <property name="geometry">
+        <rect>
+         <x>45</x>
+         <y>50</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>22.5 V</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="erm8Frame_3">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>240</y>
+        <width>150</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(187, 193, 197);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>3</number>
+      </property>
+      <widget class="QLabel" name="erm8Label_6">
+       <property name="geometry">
+        <rect>
+         <x>15</x>
+         <y>5</y>
+         <width>47</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>ERM 8</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="erm8currentLabel_6">
+       <property name="geometry">
+        <rect>
+         <x>45</x>
+         <y>25</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>30.5 A</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="erm8voltageLabel_6">
+       <property name="geometry">
+        <rect>
+         <x>45</x>
+         <y>50</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>22.5 V</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="erm1Frame_3">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>120</y>
+        <width>150</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(187, 193, 197);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>3</number>
+      </property>
+      <widget class="QLabel" name="erm1Label_6">
+       <property name="geometry">
+        <rect>
+         <x>15</x>
+         <y>5</y>
+         <width>47</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>ERM 1</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="erm1currentLabel_6">
+       <property name="geometry">
+        <rect>
+         <x>45</x>
+         <y>25</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>30.5 A</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="erm1voltageLabel_6">
+       <property name="geometry">
+        <rect>
+         <x>45</x>
+         <y>50</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>22.5 V</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="erm5Frame_3">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>240</y>
+        <width>150</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>3</number>
+      </property>
+      <widget class="QLabel" name="erm5Label_6">
+       <property name="geometry">
+        <rect>
+         <x>15</x>
+         <y>5</y>
+         <width>47</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>ERM 5</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="erm5currentLabel_6">
+       <property name="geometry">
+        <rect>
+         <x>45</x>
+         <y>25</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>30.5 A</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="erm5voltageLabel_6">
+       <property name="geometry">
+        <rect>
+         <x>45</x>
+         <y>50</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>22.5 V</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="ersLabel_3">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>30</y>
+        <width>160</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>32</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>ERS 24</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QFrame" name="erm6Frame_3">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>240</y>
+        <width>150</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(187, 193, 197);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>3</number>
+      </property>
+      <widget class="QLabel" name="erm6Label_6">
+       <property name="geometry">
+        <rect>
+         <x>15</x>
+         <y>5</y>
+         <width>47</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>ERM 6</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="erm6currentLabel_6">
+       <property name="geometry">
+        <rect>
+         <x>45</x>
+         <y>25</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>30.5 A</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="erm6voltageLabel_6">
+       <property name="geometry">
+        <rect>
+         <x>45</x>
+         <y>50</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>22.5 V</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="erm4Frame_3">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>120</y>
+        <width>150</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>3</number>
+      </property>
+      <widget class="QLabel" name="erm4Label_6">
+       <property name="geometry">
+        <rect>
+         <x>15</x>
+         <y>5</y>
+         <width>47</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>ERM 4</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="erm4currentLabel_6">
+       <property name="geometry">
+        <rect>
+         <x>45</x>
+         <y>25</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>30.5 A</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="erm4voltageLabel_6">
+       <property name="geometry">
+        <rect>
+         <x>45</x>
+         <y>50</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>22.5 V</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="erm3Frame_3">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>120</y>
+        <width>150</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>3</number>
+      </property>
+      <widget class="QLabel" name="erm3Label_6">
+       <property name="geometry">
+        <rect>
+         <x>15</x>
+         <y>5</y>
+         <width>47</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>ERM 3</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="erm3currentLabel_6">
+       <property name="geometry">
+        <rect>
+         <x>45</x>
+         <y>25</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>30.5 A</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="erm3voltageLabel_6">
+       <property name="geometry">
+        <rect>
+         <x>45</x>
+         <y>50</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>22.5 V</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="previousPushButton">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>180</y>
+        <width>51</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>28</pointsize>
+       </font>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
+      </property>
+      <property name="text">
+       <string>&lt;</string>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+   </widget>
   </widget>
   <zorder>baseFrame</zorder>
   <zorder>statusLabel</zorder>
   <zorder>returnMainButton</zorder>
-  <zorder>ersLabel</zorder>
-  <zorder>erm1Frame</zorder>
-  <zorder>erm2Frame</zorder>
-  <zorder>erm3Frame</zorder>
-  <zorder>erm4Frame</zorder>
-  <zorder>erm8Frame</zorder>
-  <zorder>erm5Frame</zorder>
-  <zorder>erm6Frame</zorder>
-  <zorder>erm7Frame</zorder>
  </widget>
  <resources/>
  <connections/>

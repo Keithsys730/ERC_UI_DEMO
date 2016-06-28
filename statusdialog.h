@@ -18,6 +18,10 @@ public:
 private slots:
     void receiveShow();
     void on_returnMainButton_clicked();
+    void on_nextPushButton_clicked();
+    void on_previousPushButton_2_clicked();
+    void on_nextPushButton_2_clicked();
+    void on_previousPushButton_clicked();
 
 private:
     Ui::StatusDialog *ui;
