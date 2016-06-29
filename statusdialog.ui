@@ -1887,7 +1887,7 @@
    <widget class="QPushButton" name="returnMainButton">
     <property name="geometry">
      <rect>
-      <x>720</x>
+      <x>700</x>
       <y>10</y>
       <width>60</width>
       <height>60</height>
@@ -1897,7 +1897,9 @@
      <enum>Qt::NoFocus</enum>
     </property>
     <property name="styleSheet">
-     <string notr="true">border-image: url(:/buttonphotos/home.png);
+     <string notr="true">border-image: url(:/buttonphotos/home1.png);
+background-color:none;
+
 </string>
     </property>
     <property name="text">

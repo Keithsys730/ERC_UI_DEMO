@@ -312,11 +312,11 @@ color: rgb(248, 15, 15);</string>
       </font>
      </property>
      <property name="focusPolicy">
-      <enum>Qt::StrongFocus</enum>
+      <enum>Qt::ClickFocus</enum>
      </property>
      <property name="styleSheet">
       <string notr="true">border-radius:3px; 
-background-color: rgb(29, 255, 51);</string>
+background-color: rgb(249, 92, 119);</string>
      </property>
      <property name="text">
       <string>OFF</string>
@@ -331,6 +331,9 @@ background-color: rgb(29, 255, 51);</string>
       <bool>true</bool>
      </property>
      <property name="default">
+      <bool>false</bool>
+     </property>
+     <property name="flat">
       <bool>false</bool>
      </property>
     </widget>
@@ -349,27 +352,27 @@ background-color: rgb(29, 255, 51);</string>
         <colorrole role="Button">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>249</red>
-           <green>92</green>
-           <blue>119</blue>
+           <red>29</red>
+           <green>255</green>
+           <blue>51</blue>
           </color>
          </brush>
         </colorrole>
         <colorrole role="Base">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>249</red>
-           <green>92</green>
-           <blue>119</blue>
+           <red>29</red>
+           <green>255</green>
+           <blue>51</blue>
           </color>
          </brush>
         </colorrole>
         <colorrole role="Window">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>249</red>
-           <green>92</green>
-           <blue>119</blue>
+           <red>29</red>
+           <green>255</green>
+           <blue>51</blue>
           </color>
          </brush>
         </colorrole>
@@ -387,27 +390,27 @@ background-color: rgb(29, 255, 51);</string>
         <colorrole role="Button">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>249</red>
-           <green>92</green>
-           <blue>119</blue>
+           <red>29</red>
+           <green>255</green>
+           <blue>51</blue>
           </color>
          </brush>
         </colorrole>
         <colorrole role="Base">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>249</red>
-           <green>92</green>
-           <blue>119</blue>
+           <red>29</red>
+           <green>255</green>
+           <blue>51</blue>
           </color>
          </brush>
         </colorrole>
         <colorrole role="Window">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>249</red>
-           <green>92</green>
-           <blue>119</blue>
+           <red>29</red>
+           <green>255</green>
+           <blue>51</blue>
           </color>
          </brush>
         </colorrole>
@@ -425,27 +428,27 @@ background-color: rgb(29, 255, 51);</string>
         <colorrole role="Button">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>249</red>
-           <green>92</green>
-           <blue>119</blue>
+           <red>29</red>
+           <green>255</green>
+           <blue>51</blue>
           </color>
          </brush>
         </colorrole>
         <colorrole role="Base">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>249</red>
-           <green>92</green>
-           <blue>119</blue>
+           <red>29</red>
+           <green>255</green>
+           <blue>51</blue>
           </color>
          </brush>
         </colorrole>
         <colorrole role="Window">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>249</red>
-           <green>92</green>
-           <blue>119</blue>
+           <red>29</red>
+           <green>255</green>
+           <blue>51</blue>
           </color>
          </brush>
         </colorrole>
@@ -469,11 +472,11 @@ background-color: rgb(29, 255, 51);</string>
       </font>
      </property>
      <property name="focusPolicy">
-      <enum>Qt::StrongFocus</enum>
+      <enum>Qt::ClickFocus</enum>
      </property>
      <property name="styleSheet">
       <string notr="true">border-radius:3px; 
-background-color: rgb(249, 92, 119);</string>
+background-color: rgb(29, 255, 51);</string>
      </property>
      <property name="text">
       <string>ON</string>
@@ -486,6 +489,9 @@ background-color: rgb(249, 92, 119);</string>
      </property>
      <property name="autoExclusive">
       <bool>true</bool>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
      </property>
     </widget>
     <widget class="QLabel" name="modeLabel">

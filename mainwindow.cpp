@@ -9,7 +9,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    //initialButtonBackgroundColor();
+    initialButtonBackgroundColor();
 }
 
 MainWindow::~MainWindow()
@@ -19,8 +19,8 @@ MainWindow::~MainWindow()
 
 void MainWindow::initialButtonBackgroundColor()
 {
-    ui->burnOffButton->setStyleSheet("background-color: none");
-    ui->burnOnButton->setStyleSheet("background-color: none");
+    ui->burnOffButton->setStyleSheet("background-color: #FFA6B5");
+    ui->burnOnButton->setStyleSheet("background-color: #1DFF33");
 }
 
 void MainWindow::on_burnOffButton_pressed()
@@ -28,12 +28,13 @@ void MainWindow::on_burnOffButton_pressed()
     //ui->burnTimeLabel->setText(QString::number(0));
     if(ui->burnOffButton->isChecked())
     {
-
+        ui->burnOffButton->setStyleSheet("background-color: #FFA6B5");
+        ui->burnOnButton->setStyleSheet("background-color: #1DFF33");
     }
     else
     {
-        ui->burnOffButton->setStyleSheet("background-color: #00F718");
-        ui->burnOnButton->setStyleSheet("background-color: #FC0630");
+        ui->burnOffButton->setStyleSheet("background-color: #F95C77");
+        ui->burnOnButton->setStyleSheet("background-color: #1DFF33");
     }
 }
 
@@ -55,12 +56,13 @@ void MainWindow::on_burnOnButton_pressed()
             }
         }
         */
-        ui->burnOnButton->setStyleSheet("background-color: #00F718");
-        ui->burnOffButton->setStyleSheet("background-color: #FC0630");
+        ui->burnOnButton->setStyleSheet("background-color: #1DFF33");
+        ui->burnOffButton->setStyleSheet("background-color: #F95C77");
     }
     else
     {
-
+        ui->burnOnButton->setStyleSheet("background-color: #B5FFBC");
+        ui->burnOffButton->setStyleSheet("background-color: #F95C77");
     }
 
 }
