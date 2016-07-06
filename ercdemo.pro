@@ -17,19 +17,22 @@ SOURCES += main.cpp\
     settingdialog.cpp \
     statusdialog.cpp \
     logdialog.cpp \
-    informationdialog.cpp
+    informationdialog.cpp \
+    keyboard.cpp
 
 HEADERS  += mainwindow.h \
     settingdialog.h \
     statusdialog.h \
     logdialog.h \
-    informationdialog.h
+    informationdialog.h \
+    keyboard.h
 
 FORMS    += mainwindow.ui \
     settingdialog.ui \
     statusdialog.ui \
     logdialog.ui \
-    informationdialog.ui
+    informationdialog.ui \
+    keyboard.ui
 
 RESOURCES += \
     buttonphotos.qrc

@@ -27,6 +27,8 @@ private slots:
     void receiveShow();
     void on_websiteButton_clicked();
 
+    void on_burnSetButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     void initialButtonBackgroundColor();
@@ -43,6 +45,7 @@ signals:
     void showStatusDialog();
     void showLogDialog();
     void showInformationDialog();
+    void showKeyBoard();
 };
 
 #endif // MAINWINDOW_H

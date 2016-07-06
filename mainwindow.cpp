@@ -131,3 +131,8 @@ void MainWindow::on_websiteButton_clicked()
 {
     QDesktopServices::openUrl(QUrl("http://www.meanwell.com"));
 }
+
+void MainWindow::on_burnSetButton_clicked()
+{
+    emit showKeyBoard();
+}
