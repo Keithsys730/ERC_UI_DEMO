@@ -105,6 +105,12 @@ void MainWindow::receiveShow()
 {
     this->show();
 }
+
+void MainWindow::receiveInputValue(QString setValue)
+{
+    ui->burnSetButton->setText(validInputValue(setValue));
+}
+
 /*
 void MainWindow::mouseMoveEvent(QMouseEvent *event)
 {
@@ -134,5 +140,16 @@ void MainWindow::on_websiteButton_clicked()
 
 void MainWindow::on_burnSetButton_clicked()
 {
-    emit showKeyBoard();
+    emit showKeyBoard(ui->burnSetButton->text());
+}
+
+QString MainWindow::validInputValue(QString value)
+{
+    if(value.toDouble()<0 || value.toDouble()>36)
+    {
+        //showErrorMessage...
+        return ui->burnSetButton->text();
+    }
+    else
+        return value.sprintf("%02.1f", value.toDouble());
 }

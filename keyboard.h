@@ -16,7 +16,7 @@ public:
     ~KeyBoard();
 
 private slots:
-    void receiveShow();
+    void receiveShow(QString setValue);
     void on_number1Button_clicked();
     void on_numberEnterButton_clicked();
     void on_number2Button_clicked();
@@ -36,7 +36,7 @@ private:
     void setInputValue();
 
 signals:
-    void showMainPage();
+    void sendInputValue(QString);
 };
 
 #endif // KEYBOARD_H

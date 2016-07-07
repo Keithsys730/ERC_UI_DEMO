@@ -6,6 +6,7 @@
 #include "statusdialog.h"
 #include "logdialog.h"
 #include "informationdialog.h"
+#include "keyboard.h"
 #include <QTranslator>
 
 int main(int argc, char *argv[])
@@ -21,6 +22,7 @@ int main(int argc, char *argv[])
     StatusDialog statusDialog;
     LogDialog logDialog;
     InformationDialog informationDialog;
+    KeyBoard keyBoard;
 
     /*
     QSplashScreen *splash = new QSplashScreen;
@@ -51,6 +53,8 @@ int main(int argc, char *argv[])
     QObject::connect(&logDialog, SIGNAL(showMainPage()),&mainPage,SLOT(receiveShow()));
     QObject::connect(&mainPage, SIGNAL(showInformationDialog()),&informationDialog,SLOT(receiveShow()));
     QObject::connect(&informationDialog, SIGNAL(showMainPage()),&mainPage,SLOT(receiveShow()));
+    QObject::connect(&mainPage, SIGNAL(showKeyBoard(QString)),&keyBoard,SLOT(receiveShow(QString)));
+    QObject::connect(&keyBoard, SIGNAL(sendInputValue(QString)),&mainPage,SLOT(receiveInputValue(QString)));
 
     return app.exec();
 }

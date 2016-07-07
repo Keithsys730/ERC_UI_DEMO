@@ -14,15 +14,15 @@ KeyBoard::~KeyBoard()
     delete ui;
 }
 
-void KeyBoard::receiveShow()
+void KeyBoard::receiveShow(QString setValue)
 {
     this->show();
-    ui->inputLineEdit->setText("");
+    ui->inputLineEdit->setText(setValue);
 }
 
 void KeyBoard::on_numberEnterButton_clicked()
 {
-    emit showMainPage();
+    emit sendInputValue(ui->inputLineEdit->text());
     this->hide();
 }
 

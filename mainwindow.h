@@ -26,12 +26,13 @@ private slots:
     void on_informationButton_clicked();
     void receiveShow();
     void on_websiteButton_clicked();
-
     void on_burnSetButton_clicked();
+    void receiveInputValue(QString setValue);
 
 private:
     Ui::MainWindow *ui;
     void initialButtonBackgroundColor();
+    QString validInputValue(QString value);
 //    QElapsedTimer burnTimer;
 //    int burnTime;
 //    bool burnTimeStart;
@@ -45,7 +46,7 @@ signals:
     void showStatusDialog();
     void showLogDialog();
     void showInformationDialog();
-    void showKeyBoard();
+    void showKeyBoard(QString);
 };
 
 #endif // MAINWINDOW_H
