@@ -46,7 +46,7 @@ signals:
     void showStatusDialog();
     void showLogDialog();
     void showInformationDialog();
-    void showKeyBoard(QString);
+    void showKeyBoard();
 };
 
 #endif // MAINWINDOW_H

@@ -16,7 +16,8 @@ public:
     ~KeyBoard();
 
 private slots:
-    void receiveShow(QString setValue);
+    //bool eventFilter(QObject *, QEvent *);
+    void receiveShow();
     void on_number1Button_clicked();
     void on_numberEnterButton_clicked();
     void on_number2Button_clicked();
@@ -29,7 +30,8 @@ private slots:
     void on_number9Button_clicked();
     void on_number0Button_clicked();
     void on_numberDotButton_clicked();
-    void on_numberDelButton_clicked();
+    void on_numberClearButton_clicked();
+    void on_numberEscButton_clicked();
 
 private:
     Ui::KeyBoard *ui;

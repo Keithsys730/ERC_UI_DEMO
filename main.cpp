@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
     QObject::connect(&logDialog, SIGNAL(showMainPage()),&mainPage,SLOT(receiveShow()));
     QObject::connect(&mainPage, SIGNAL(showInformationDialog()),&informationDialog,SLOT(receiveShow()));
     QObject::connect(&informationDialog, SIGNAL(showMainPage()),&mainPage,SLOT(receiveShow()));
-    QObject::connect(&mainPage, SIGNAL(showKeyBoard(QString)),&keyBoard,SLOT(receiveShow(QString)));
+    QObject::connect(&mainPage, SIGNAL(showKeyBoard()),&keyBoard,SLOT(receiveShow()));
     QObject::connect(&keyBoard, SIGNAL(sendInputValue(QString)),&mainPage,SLOT(receiveInputValue(QString)));
 
     return app.exec();

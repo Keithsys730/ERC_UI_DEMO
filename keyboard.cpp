@@ -7,17 +7,33 @@ KeyBoard::KeyBoard(QWidget *parent) :
 {
     ui->setupUi(this);
     setWindowFlags(Qt::WindowStaysOnTopHint|Qt::FramelessWindowHint);
+    setGeometry(400,100,285,320);
+    //ui->number1Button->installEventFilter(this);
 }
 
 KeyBoard::~KeyBoard()
 {
     delete ui;
 }
-
-void KeyBoard::receiveShow(QString setValue)
+/*
+bool KeyBoard::eventFilter(QObject *object,QEvent *event)
+{
+    if(object == ui->number1Button)
+    {
+        if(event->type()==QEvent::MouseButtonRelease)
+        {
+            emit sendInputValue(ui->inputLineEdit->text());
+            this->hide();
+            return true;
+        }
+    }
+    //return KeyBoard::eventFilter(object, event);
+}
+*/
+void KeyBoard::receiveShow()
 {
     this->show();
-    ui->inputLineEdit->setText(setValue);
+    ui->inputLineEdit->setText("");
 }
 
 void KeyBoard::on_numberEnterButton_clicked()
@@ -86,11 +102,20 @@ void KeyBoard::setInputValue()
     ui->inputLineEdit->setText(ui->inputLineEdit->text() + qobject_cast<QPushButton *>(sender())->text());
 }
 
-void KeyBoard::on_numberDelButton_clicked()
+void KeyBoard::on_numberClearButton_clicked()
 {
+    ui->inputLineEdit->setText("");
+    /*
     QString text = ui->inputLineEdit->text();
     text.chop(1);
     if(text.isEmpty())
         text="";
     ui->inputLineEdit->setText(text);
+    */
+}
+
+void KeyBoard::on_numberEscButton_clicked()
+{
+    emit sendInputValue("");
+    this->hide();
 }

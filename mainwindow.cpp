@@ -140,15 +140,19 @@ void MainWindow::on_websiteButton_clicked()
 
 void MainWindow::on_burnSetButton_clicked()
 {
-    emit showKeyBoard(ui->burnSetButton->text());
+    emit showKeyBoard();
 }
 
 QString MainWindow::validInputValue(QString value)
 {
-    if(value.toDouble()<0 || value.toDouble()>36)
+    if(value == "" || value.toDouble()<0.1 || value.toDouble()>36.0)
     {
         //showErrorMessage...
         return ui->burnSetButton->text();
+    }
+    else if(value.toDouble()<10.0)
+    {
+        return value.sprintf("0%02.1f", value.toDouble());
     }
     else
         return value.sprintf("%02.1f", value.toDouble());
