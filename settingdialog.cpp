@@ -6,6 +6,8 @@ SettingDialog::SettingDialog(QWidget *parent) :
     ui(new Ui::SettingDialog)
 {
     ui->setupUi(this);
+    ui->dateEdit->setDate(QDate::currentDate());
+    ui->timeEdit->setTime(QTime::currentTime());
 }
 
 SettingDialog::~SettingDialog()
