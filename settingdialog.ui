@@ -651,6 +651,9 @@
      <string>Time</string>
     </attribute>
     <widget class="QDateEdit" name="dateEdit">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>110</x>
@@ -706,6 +709,9 @@
      </property>
     </widget>
     <widget class="QTimeEdit" name="timeEdit">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>380</x>
@@ -745,6 +751,9 @@
      <string>Network</string>
     </attribute>
     <widget class="QLineEdit" name="setIPLineEdit">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>280</x>
@@ -817,6 +826,9 @@
      </property>
     </widget>
     <widget class="QLineEdit" name="setMaskLineEdit">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>280</x>
@@ -868,6 +880,9 @@
      </property>
     </widget>
     <widget class="QLineEdit" name="setGatewayLineEdit">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>280</x>
@@ -919,6 +934,9 @@
      </property>
     </widget>
     <widget class="QLineEdit" name="setDNSLineEdit">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>280</x>
