@@ -145,7 +145,7 @@ void MainWindow::on_burnSetButton_clicked()
 
 QString MainWindow::validInputValue(QString value)
 {
-    if(value == "" || value.toDouble()<0.1 || value.toDouble()>36.0)
+    if(value == "" || value.toDouble()<0.5 || value.toDouble()>30.0)
     {
         //showErrorMessage...
         return ui->burnSetButton->text();

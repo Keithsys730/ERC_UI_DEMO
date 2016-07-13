@@ -236,7 +236,7 @@ color: rgb(248, 15, 15);</string>
      <string notr="true">color: rgb(185, 3, 188);</string>
     </property>
     <property name="text">
-     <string>230</string>
+     <string>168</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -933,7 +933,7 @@ background-color: rgb(29, 255, 51);</string>
       <string notr="true">color: rgb(185, 3, 188);</string>
      </property>
      <property name="text">
-      <string>30.8</string>
+      <string>16.8</string>
      </property>
      <property name="checkable">
       <bool>false</bool>
