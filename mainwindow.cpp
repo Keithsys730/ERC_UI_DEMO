@@ -10,6 +10,9 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     initialButtonBackgroundColor();
+    burnTime=0;
+    timer = new QTimer(this);
+    connect(timer, SIGNAL(timeout()), this, SLOT(startBurnTime()));
 }
 
 MainWindow::~MainWindow()
@@ -33,6 +36,8 @@ void MainWindow::on_burnOffButton_pressed()
     }
     else
     {
+        timer->stop();
+        burnTime=0;
         ui->burnOffButton->setStyleSheet("background-color: #F95C77");
         ui->burnOnButton->setStyleSheet("background-color: #1DFF33");
     }
@@ -42,20 +47,8 @@ void MainWindow::on_burnOnButton_pressed()
 {
     if(!ui->burnOnButton->isChecked())
     {
-        //burnTime = 0;
-        /*burnTimeStart = true;
-        burnTimer.start();
-        while(burnTimeStart)
-        {
-            //ui->burnTimeLcdNumber->value(burnTimeMinutes.elapsed());
-            if(burnTimer.elapsed()>1000)
-            {
-                burnTimer.restart();
-                burnTime += 1;
-                ui->burnTimeLabel->setText(QString::number(burnTime));
-            }
-        }
-        */
+        ui->burnTimeLabel->setText("000");
+        timer->start(1000);
         ui->burnOnButton->setStyleSheet("background-color: #1DFF33");
         ui->burnOffButton->setStyleSheet("background-color: #F95C77");
     }
@@ -64,17 +57,13 @@ void MainWindow::on_burnOnButton_pressed()
         ui->burnOnButton->setStyleSheet("background-color: #B5FFBC");
         ui->burnOffButton->setStyleSheet("background-color: #F95C77");
     }
-
 }
 
 void MainWindow::startBurnTime()
 {
-    int burnTime=0;
-    for(int temp=0;temp<100;temp++)
-    {
-        burnTime+=1;
-        ui->burnTimeLabel->setText(QString::number(burnTime));
-    }
+    burnTime += 1;
+    QString value;
+    ui->burnTimeLabel->setText(value.sprintf("%03d", burnTime));
 }
 
 void MainWindow::on_settingButton_clicked()

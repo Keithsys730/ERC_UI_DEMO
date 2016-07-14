@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 //#include <QElapsedTimer>
+#include <QTimer>
 
 namespace Ui {
 class MainWindow;
@@ -33,6 +34,8 @@ private:
     Ui::MainWindow *ui;
     void initialButtonBackgroundColor();
     QString validInputValue(QString value);
+    QTimer *timer;
+    int burnTime;
 //    QElapsedTimer burnTimer;
 //    int burnTime;
 //    bool burnTimeStart;
