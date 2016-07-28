@@ -164,7 +164,7 @@ int SpiWrite (int spi_device, unsigned char *data, int length)
         spi[i].tx_buf        = (unsigned long)(data + i); // transmit from "data"
         spi[i].rx_buf        = (unsigned long)(data + i) ; // receive into "data"
         spi[i].len           = sizeof(*(data + i)) ;
-        spi[i].delay_usecs   = 5 ;
+        spi[i].delay_usecs   = 100 ;
         spi[i].speed_hz      = spi_speed ;
         spi[i].bits_per_word = spi_bitsPerWord ;
         spi[i].cs_change = 0;
@@ -206,25 +206,117 @@ void SPIReadTest()
     u_int8_t tx[] = {MCP_READ, 0x31, 0x00};
     SpiWrite(0, tx, sizeof(tx));
 
-    for(retVal =0; retVal < sizeof(tx); ++retVal)
-    {
-        printf("%.2X ", *(tx+retVal));
-    }
+    //for(retVal =0; retVal < sizeof(tx); ++retVal)
+    //{
+    //    printf("Read 0x31: %.2X \n", *(tx+2));
+    //}
 
-    u_int8_t rx[] = {MCP_READ, 0x3C, 0x00};
+    u_int8_t rx[] = {MCP_READ, 0x34, 0x00};
     SpiWrite(0, rx, sizeof(rx));
 
     for(retVal =0; retVal < sizeof(rx); ++retVal)
     {
-        printf("%.2X ", *(rx+retVal));
+        printf("Read 0x31-3D: %.2X \n", *(rx+retVal));
     }
 }
 
-void SPIWriteBTest()
+
+void delay()
 {
-    int retVal = -1;
-    u_int8_t rx[] = {MCP_LOAD_TX0, 0x01,0x02,0x03,0x04,0x05,0x06,0x07,0x08,0x09,0x0A,0x0B,0x0C};
+    int counter = 50000;
+    while(counter)
+    {
+        counter--;
+    }
+}
+
+
+void SPIWriteBTest(int val)
+{
+    u_int8_t rx[] = {MCP_LOAD_TX0+1, val,0x07,0x08,0x09,0x0A,0x0B,0x0C,0x0D};
     SpiWrite(0, rx, sizeof(rx));
+
+    delay();
+
+    u_int8_t tx[] = {MCP_WRITE, MCP_TXB0CTRL, 0x0F};
+    SpiWrite(0, tx, sizeof(tx));
+
+}
+
+void SPIWriteTxBtoCAN()
+{
+    u_int8_t ax[] = {MCP_WRITE,0x3F,0x00};
+    SpiWrite(0, ax, sizeof(ax));
+
+    u_int8_t bx[] = {MCP_WRITE,MCP_CANINTF,0x00};
+    SpiWrite(0, bx, sizeof(bx));
+
+    u_int8_t rx[] = {MCP_WRITE,MCP_TXB0CTRL,0x00};
+    SpiWrite(0, rx, sizeof(rx));
+
+    u_int8_t tx[] = {MCP_WRITE, MCP_TXB0CTRL, 0x0F};
+    SpiWrite(0, tx, sizeof(tx));
+    /*
+    u_int8_t bx[] = {MCP_RTS_TX1};
+    SpiWrite(0, bx, sizeof(bx));
+
+    u_int8_t cx[] = {MCP_RTS_TX2};
+    SpiWrite(0, cx, sizeof(cx));
+    */
+}
+
+
+
+void SPIReadTxB0CTL()
+{
+    u_int8_t rx[] = {MCP_READ, MCP_TXB0CTRL,0x00};
+    SpiWrite(0, rx, sizeof(rx));
+
+    printf("Read TxB0CTL: %.2X \n", *(rx+2));
+}
+
+void MCP_Read_Byte( unsigned char address)
+{
+    u_int8_t tx[] = {MCP_READ, address,0x00};
+    SpiWrite(0, tx, sizeof(tx));
+    delay();
+
+    printf("Read : %.2X \n",  *(tx+2));
+}
+
+void SPIReadCANTF()
+{
+    MCP_Read_Byte(0x3F);
+
+    MCP_Read_Byte(MCP_CANINTF);
+
+    MCP_Read_Byte(0x0C);
+
+    MCP_Read_Byte(0x0D);
+
+    MCP_Read_Byte(MCP_CANSTAT);
+
+    MCP_Read_Byte(MCP_TEC);
+
+    MCP_Read_Byte(MCP_REC);
+
+    MCP_Read_Byte(MCP_CNF3);
+
+    MCP_Read_Byte(MCP_CNF2);
+
+    MCP_Read_Byte(MCP_CNF1);
+
+    MCP_Read_Byte(MCP_CANINTE);
+
+    MCP_Read_Byte(MCP_EFLG);
+
+    MCP_Read_Byte(MCP_TXB1CTRL);
+
+    MCP_Read_Byte(MCP_TXB2CTRL);
+
+    MCP_Read_Byte(MCP_RXB0CTRL);
+
+    MCP_Read_Byte(MCP_RXB1CTRL);
 
 }
 
@@ -275,7 +367,10 @@ void MCP_Write_Byte( unsigned char address, unsigned char data )
     };
 
     SpiWrite(0, writeData, sizeof(writeData));
+
+    delay();
 }
+
 
 void init_MCP2515()
 {
@@ -288,9 +383,16 @@ void init_MCP2515()
     //initial MCP2515
     SpiWrite(0, resetCommand, sizeof(resetCommand));	//Reset MCP2515
 //    DelayUs(2000);									//wait for MCP2515 start up
+    int counter = 5000;
+    while(counter)
+    {
+        counter--;
+    }
+
     MCP_Write_Byte(MCP_CNF1,def_CNF1);				//setup CNF1~3
     MCP_Write_Byte(MCP_CNF2,def_CNF2);
     MCP_Write_Byte(MCP_CNF3,def_CNF3);
+
     MCP_Write_Byte(MCP_RXM0SIDH,def_RXM0SIDH);		//setup RXM0
     MCP_Write_Byte(MCP_RXM0SIDL,def_RXM0SIDL);
     MCP_Write_Byte(MCP_RXM0EID8,def_RXM0EID8);
@@ -361,12 +463,12 @@ int main(int argc, char *argv[])
     */
 
     app.setOverrideCursor(QCursor(Qt::BlankCursor));
-    //mainPage.setWindowFlags(Qt::Window|Qt::FramelessWindowHint);
-    //settingDialog.setWindowFlags(Qt::Window|Qt::FramelessWindowHint);
-    //statusDialog.setWindowFlags(Qt::Window|Qt::FramelessWindowHint);
-    //logDialog.setWindowFlags(Qt::Window|Qt::FramelessWindowHint);
-    //informationDialog.setWindowFlags(Qt::Window|Qt::FramelessWindowHint);
-    //mainPage.showFullScreen();
+    mainPage.setWindowFlags(Qt::Window|Qt::FramelessWindowHint);
+    settingDialog.setWindowFlags(Qt::Window|Qt::FramelessWindowHint);
+    statusDialog.setWindowFlags(Qt::Window|Qt::FramelessWindowHint);
+    logDialog.setWindowFlags(Qt::Window|Qt::FramelessWindowHint);
+    informationDialog.setWindowFlags(Qt::Window|Qt::FramelessWindowHint);
+    mainPage.showFullScreen();
 
     QObject::connect(&mainPage, SIGNAL(showSettingDialog()),&settingDialog,SLOT(receiveShow()));
     QObject::connect(&settingDialog, SIGNAL(showMainPage()),&mainPage,SLOT(receiveShow()));
@@ -379,7 +481,9 @@ int main(int argc, char *argv[])
     QObject::connect(&mainPage, SIGNAL(showKeyBoard()),&keyBoard,SLOT(receiveShow()));
     QObject::connect(&keyBoard, SIGNAL(sendInputValue(QString)),&mainPage,SLOT(receiveInputValue(QString)));
 
+    SpiClosePort(0);
     SpiOpenPort(0);
+    /*
     //u_int8_t tx[] = {0xC0};
     //SpiWriteAndRead(0, "0xC0", 1);
     //u_int8_t tx[] = {0xA0,0x00,0x00};
@@ -392,10 +496,30 @@ int main(int argc, char *argv[])
     //SPIReadStatus();
 
     //SPIReadTest();
-    SPIWriteBTest();
-    SPIReadTest();
+    //SPIWriteBTest();
+    //SPIReadTest();
+    */
 
-    SpiClosePort(0);
+    init_MCP2515();
+    int temp;
+    for (temp=0;temp<60;++temp)
+    {
+        SPIWriteBTest(temp);
+        delay();
+
+    }
+    SPIWriteTxBtoCAN();
+
+    int counter = 50000;
+    while(counter)
+    {
+        counter--;
+    }
+
+    SPIReadTxB0CTL();
+    SPIReadCANTF();
+
+    //SpiClosePort(0);
 
     mainPage.show();
 
