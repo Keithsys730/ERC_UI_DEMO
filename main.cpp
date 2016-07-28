@@ -20,14 +20,7 @@
 #include <unistd.h>
 #include <cstring>
 
-int spi_cs0_fd;				//file descriptor for the SPI device
-int spi_cs1_fd;				//file descriptor for the SPI device
-unsigned char spi_mode;
-unsigned char spi_bitsPerWord;
-unsigned int spi_speed;
-
-
-
+#include "MCP2515.h"
 
 //***********************************
 //***********************************
@@ -52,7 +45,7 @@ int SpiOpenPort (int spi_device)
     spi_bitsPerWord = 8;
 
     //----- SET SPI BUS SPEED -----
-    spi_speed = 1000000;		//1000000 = 1MHz (1uS per bit)
+    spi_speed = 400000;		//1000000 = 1MHz (1uS per bit)
 
 
     if (spi_device)
@@ -151,7 +144,7 @@ int SpiClosePort (int spi_device)
 //*******************************************
 //*******************************************
 //data		Bytes to write.  Contents is overwritten with bytes read.
-int SpiWriteAndRead (int spi_device, unsigned char *data, int length)
+int SpiWrite (int spi_device, unsigned char *data, int length)
 {
     struct spi_ioc_transfer spi[length];
     int i = 0;
@@ -171,29 +164,174 @@ int SpiWriteAndRead (int spi_device, unsigned char *data, int length)
         spi[i].tx_buf        = (unsigned long)(data + i); // transmit from "data"
         spi[i].rx_buf        = (unsigned long)(data + i) ; // receive into "data"
         spi[i].len           = sizeof(*(data + i)) ;
-        spi[i].delay_usecs   = 0 ;
+        spi[i].delay_usecs   = 5 ;
         spi[i].speed_hz      = spi_speed ;
         spi[i].bits_per_word = spi_bitsPerWord ;
         spi[i].cs_change = 0;
     }
 
     retVal = ioctl(*spi_cs_fd, SPI_IOC_MESSAGE(length), &spi) ;
-
+    //retVal = ioctl(*spi_cs_fd, SPI_IOC_WR_BITS_PER_WORD, &spi);
     if(retVal < 0)
     {
         perror("Error - Problem transmitting spi data..ioctl");
         exit(1);
     }
 
-    for(retVal =0; retVal < length; ++retVal)
-    {
-        if(!(retVal % 6))
-            puts("");
-        printf("%.2X ", *(data+retVal));
-    }
-
     return retVal;
 }
+
+void SPIReadStatus()
+{
+    int retVal = -1;
+    u_int8_t tx[] = {MCP_READ_STATUS};
+    //u_int8_t rx[] = {0x00, 0x00};
+    SpiWrite(0, tx, sizeof(tx));
+
+
+    //
+    for(retVal =0; retVal < sizeof(tx); ++retVal)
+    {
+        //if(!(retVal % 6))
+            //puts("");
+        printf("%.2X ", *(tx+retVal));
+    }
+    //
+    //return retVal;
+}
+
+void SPIReadTest()
+{
+    int retVal = -1;
+    u_int8_t tx[] = {MCP_READ, 0x31, 0x00};
+    SpiWrite(0, tx, sizeof(tx));
+
+    for(retVal =0; retVal < sizeof(tx); ++retVal)
+    {
+        printf("%.2X ", *(tx+retVal));
+    }
+
+    u_int8_t rx[] = {MCP_READ, 0x3C, 0x00};
+    SpiWrite(0, rx, sizeof(rx));
+
+    for(retVal =0; retVal < sizeof(rx); ++retVal)
+    {
+        printf("%.2X ", *(rx+retVal));
+    }
+}
+
+void SPIWriteBTest()
+{
+    int retVal = -1;
+    u_int8_t rx[] = {MCP_LOAD_TX0, 0x01,0x02,0x03,0x04,0x05,0x06,0x07,0x08,0x09,0x0A,0x0B,0x0C};
+    SpiWrite(0, rx, sizeof(rx));
+
+}
+
+/*
+unsigned char ReadSPI( void )
+{
+    SSPBUF = 0x00;                  //   Initiate a bus cycle by writing
+    while ( ! BF );             	// to SSPBUF.  Wait until a received
+    return ( SSPBUF );              // byte is ready, and return it.
+}
+
+unsigned char WriteSPI( unsigned char data_out )
+{
+    SSPBUF = data_out;              //   Write the data byte to SSPBUF
+    if ( WCOL )                     // register.  If a write collision
+        return ( -1 );              // occurred, return an error condition.
+    else                            // Otherwise, wait until the SSPBUF
+    {                               // is empty and return success.
+        while( ! BF );
+    }
+    return ( 0 );
+}
+
+unsigned char MCP_Read_Byte( unsigned char Address)
+{
+    unsigned char temp_data;
+    SELECT_MCP;
+    WriteSPI( MCP_READ );
+    WriteSPI( Address );
+    temp_data=ReadSPI();
+    UNSELECT_MCP;
+    return(temp_data);
+}
+
+void MCP_Write_Cmd( unsigned char Cmd )
+{
+    SELECT_MCP;
+    WriteSPI( Cmd );
+    UNSELECT_MCP;
+}
+*/
+
+void MCP_Write_Byte( unsigned char address, unsigned char data )
+{
+    u_int8_t writeData[] =
+    {
+        MCP_WRITE, address, data,
+    };
+
+    SpiWrite(0, writeData, sizeof(writeData));
+}
+
+void init_MCP2515()
+{
+    //initial SPI
+    SpiClosePort(0);
+    SpiOpenPort(0);
+
+    u_int8_t resetCommand[] = {MCP_RESET};
+
+    //initial MCP2515
+    SpiWrite(0, resetCommand, sizeof(resetCommand));	//Reset MCP2515
+//    DelayUs(2000);									//wait for MCP2515 start up
+    MCP_Write_Byte(MCP_CNF1,def_CNF1);				//setup CNF1~3
+    MCP_Write_Byte(MCP_CNF2,def_CNF2);
+    MCP_Write_Byte(MCP_CNF3,def_CNF3);
+    MCP_Write_Byte(MCP_RXM0SIDH,def_RXM0SIDH);		//setup RXM0
+    MCP_Write_Byte(MCP_RXM0SIDL,def_RXM0SIDL);
+    MCP_Write_Byte(MCP_RXM0EID8,def_RXM0EID8);
+    MCP_Write_Byte(MCP_RXM0EID0,def_RXM0EID0);
+    MCP_Write_Byte(MCP_RXF0SIDH,def_RXF0SIDH);		//setup RXF0
+    MCP_Write_Byte(MCP_RXF0SIDL,def_RXF0SIDL);
+    MCP_Write_Byte(MCP_RXF0EID8,def_RXF0EID8);
+    MCP_Write_Byte(MCP_RXF0EID0,def_RXF0EID0);
+
+    MCP_Write_Byte(MCP_RXM1SIDH,def_RXM1SIDH);		//setup RXM1
+    MCP_Write_Byte(MCP_RXM1SIDL,def_RXM1SIDL);
+    MCP_Write_Byte(MCP_RXM1EID8,def_RXM1EID8);
+    MCP_Write_Byte(MCP_RXM1EID0,def_RXM1EID0);
+    MCP_Write_Byte(MCP_RXF2SIDH,def_RXF2SIDH);		//setup RXF2
+    MCP_Write_Byte(MCP_RXF2SIDL,def_RXF2SIDL);
+    MCP_Write_Byte(MCP_RXF2EID8,def_RXF2EID8);
+    MCP_Write_Byte(MCP_RXF2EID0,def_RXF2EID0);
+
+    MCP_Write_Byte(MCP_CANCTRL,def_CANCTRL);		//change to normal mode
+
+    MCP_Write_Byte(MCP_TXB0CTRL+1,def_TXB0SIDH);		//setup TXB0
+    MCP_Write_Byte(MCP_TXB0CTRL+2,def_TXB0SIDL);
+    MCP_Write_Byte(MCP_TXB0CTRL+3,def_TXB0EID8);
+    MCP_Write_Byte(MCP_TXB0CTRL+4,def_TXB0EID0);
+    MCP_Write_Byte(MCP_TXB0CTRL+5,4);					//DLC
+    MCP_Write_Byte(MCP_TXB0CTRL+6,0);
+    MCP_Write_Byte(MCP_TXB0CTRL+7,0);
+    MCP_Write_Byte(MCP_TXB0CTRL+8,0);
+    MCP_Write_Byte(MCP_TXB0CTRL+9,0);
+
+    MCP_Write_Byte(MCP_TXB1CTRL+1,def_TXB1SIDH);		//setup TXB1
+    MCP_Write_Byte(MCP_TXB1CTRL+2,def_TXB1SIDL);
+    MCP_Write_Byte(MCP_TXB1CTRL+3,def_TXB1EID8);
+    MCP_Write_Byte(MCP_TXB1CTRL+4,def_TXB1EID0);
+    MCP_Write_Byte(MCP_TXB1CTRL+5,4);					//DLC
+    MCP_Write_Byte(MCP_TXB1CTRL+6,0);
+    MCP_Write_Byte(MCP_TXB1CTRL+7,0);
+    MCP_Write_Byte(MCP_TXB1CTRL+8,0);
+    MCP_Write_Byte(MCP_TXB1CTRL+9,0);
+}
+
 
 int main(int argc, char *argv[])
 {
@@ -211,17 +349,6 @@ int main(int argc, char *argv[])
     InformationDialog informationDialog;
     KeyBoard keyBoard;
 
-    u_int8_t tx[] =
-    {
-        0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-        0x40, 0x00, 0x00, 0x00, 0x00, 0x95,
-        0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-        0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-        0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-        0xDE, 0xAD, 0xBE, 0xEF, 0xBA, 0xAD,
-        0xF5, 0x0D,
-    };
-
     /*
     QSplashScreen *splash = new QSplashScreen;
     splash->setPixmap(QPixmap(":/buttonphotos/Meanwell_2.png"));
@@ -234,14 +361,12 @@ int main(int argc, char *argv[])
     */
 
     app.setOverrideCursor(QCursor(Qt::BlankCursor));
-    mainPage.setWindowFlags(Qt::Window|Qt::FramelessWindowHint);
-    settingDialog.setWindowFlags(Qt::Window|Qt::FramelessWindowHint);
-    statusDialog.setWindowFlags(Qt::Window|Qt::FramelessWindowHint);
-    logDialog.setWindowFlags(Qt::Window|Qt::FramelessWindowHint);
-    informationDialog.setWindowFlags(Qt::Window|Qt::FramelessWindowHint);
+    //mainPage.setWindowFlags(Qt::Window|Qt::FramelessWindowHint);
+    //settingDialog.setWindowFlags(Qt::Window|Qt::FramelessWindowHint);
+    //statusDialog.setWindowFlags(Qt::Window|Qt::FramelessWindowHint);
+    //logDialog.setWindowFlags(Qt::Window|Qt::FramelessWindowHint);
+    //informationDialog.setWindowFlags(Qt::Window|Qt::FramelessWindowHint);
     //mainPage.showFullScreen();
-
-    mainPage.show();
 
     QObject::connect(&mainPage, SIGNAL(showSettingDialog()),&settingDialog,SLOT(receiveShow()));
     QObject::connect(&settingDialog, SIGNAL(showMainPage()),&mainPage,SLOT(receiveShow()));
@@ -255,8 +380,24 @@ int main(int argc, char *argv[])
     QObject::connect(&keyBoard, SIGNAL(sendInputValue(QString)),&mainPage,SLOT(receiveInputValue(QString)));
 
     SpiOpenPort(0);
-    SpiWriteAndRead(0, tx, sizeof(tx));
+    //u_int8_t tx[] = {0xC0};
+    //SpiWriteAndRead(0, "0xC0", 1);
+    //u_int8_t tx[] = {0xA0,0x00,0x00};
+    //for(int temp=0; temp<10000; ++temp)
+        //SpiWrite(0, tx, sizeof(tx));
+    //init_MCP2515();
+    //SpiWrite(0, tx, sizeof(tx));
+
+    //u_int8_t rx[] = {0x00};
+    //SPIReadStatus();
+
+    //SPIReadTest();
+    SPIWriteBTest();
+    SPIReadTest();
+
     SpiClosePort(0);
+
+    mainPage.show();
 
     return app.exec();
 }
