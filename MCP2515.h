@@ -154,13 +154,6 @@ Copyright 2003 Kimberly Otten Software Consulting
 #define MCP_WAKIF		0x40
 #define MCP_MERRF		0x80
 
-
-int spi_cs0_fd;				//file descriptor for the SPI device
-int spi_cs1_fd;				//file descriptor for the SPI device
-unsigned char spi_mode;
-unsigned char spi_bitsPerWord;
-unsigned int spi_speed;
-
 #define def_CNF1 0b00000001				//SJW=1TQ, BPR=1, baudrate=250kHZ @16TQ
 #define def_CNF2 0b11110001				//PS1=7TQ, PR=2TQ
 #define def_CNF3 0b00000101				//PS2=6TQ

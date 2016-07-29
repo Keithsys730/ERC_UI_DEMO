@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -18,14 +18,17 @@ SOURCES += main.cpp\
     statusdialog.cpp \
     logdialog.cpp \
     informationdialog.cpp \
-    keyboard.cpp
+    keyboard.cpp \
+    spi.cpp
 
 HEADERS  += mainwindow.h \
     settingdialog.h \
     statusdialog.h \
     logdialog.h \
     informationdialog.h \
-    keyboard.h
+    keyboard.h \
+    MCP2515.h \
+    spi.h
 
 FORMS    += mainwindow.ui \
     settingdialog.ui \
@@ -40,3 +43,5 @@ RESOURCES += \
 TRANSLATIONS += erc_demo_en.ts  \
     erc_demo_tw_zh.ts   \
     erc_demo_cn_zh.ts
+
+LIBS    +=  -lbcm2835
