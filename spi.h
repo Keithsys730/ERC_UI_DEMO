@@ -28,16 +28,14 @@ public:
     SPI();
     ~SPI();
 
-    qint16 openPort(qint8 device);
-    qint16 closePort(qint8 device);
-    qint16 write(qint8 spi_device, unsigned char *data, qint16 length);
-    void read();
+    void openPort(qint8 device);
+    void closePort(qint8 device);
+    void write(qint8 device, unsigned char *data, qint16 length);
     void delay(qint32 counter);
-    void writeBTest(qint8 value);
+    void writeBufferTest(qint8 value);
     void writeTxBtoCAN();
-    void readTxB0CTL();
-    void readByte(unsigned char address);
-    void readCANTF();
+    u_int8_t readByte(unsigned char address);
+    void readSPIConfig();
     void writeByte(unsigned char address, unsigned char data);
     void initMCP2515();
 

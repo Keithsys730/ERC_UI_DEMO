@@ -82,9 +82,12 @@ Copyright 2003 Kimberly Otten Software Consulting
 
 #define MCP_BITMOD		0x05
 
-#define MCP_LOAD_TX0	0x40
-#define MCP_LOAD_TX1	0x42
-#define MCP_LOAD_TX2	0x44
+#define MCP_LOAD_TXB0SIDH	0x40
+#define MCP_LOAD_TXB0D0     0x41
+#define MCP_LOAD_TXB1SIDH	0x42
+#define MCP_LOAD_TXB1D0     0x43
+#define MCP_LOAD_TXB2SIDH	0x44
+#define MCP_LOAD_TXB2D0     0x45
 
 #define MCP_RTS_TX0		0x81
 #define MCP_RTS_TX1		0x82
@@ -187,7 +190,7 @@ Copyright 2003 Kimberly Otten Software Consulting
 #define def_TXB1EID8 0b00001110
 #define def_TXB1EID0 0b11100000
 
-#define SELECT_MCP	   	    RB0 = 0;    //chip selection
-#define UNSELECT_MCP 	    RB0 = 1;
+//#define SELECT_MCP	   	    RB0 = 0;    //chip selection
+//#define UNSELECT_MCP 	    RB0 = 1;
 
 #endif

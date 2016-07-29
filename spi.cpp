@@ -2,15 +2,17 @@
 
 SPI::SPI()
 {
-
+    closePort(0);
+    openPort(0);
+    initMCP2515();
 }
 
 SPI::~SPI()
 {
-
+    closePort(0);
 }
 
-qint16 SPI::openPort(qint8 device)
+void SPI::openPort(qint8 device)
 {
     qint16 status = -1;
     qint8 *csFd;
@@ -31,15 +33,15 @@ qint16 SPI::openPort(qint8 device)
 
 
     if (device)
+    {
         csFd = &cs1Fd;
-    else
-        csFd = &cs0Fd;
-
-
-    if (device)
         *csFd = open(SPIDev1, O_RDWR);
+    }
     else
+    {
+        csFd = &cs0Fd;
         *csFd = open(SPIDev0, O_RDWR);
+    }
 
     if (*csFd < 0)
     {
@@ -89,12 +91,11 @@ qint16 SPI::openPort(qint8 device)
       exit(1);
     }
 
-    return(status);
 }
 
-qint16 SPI::closePort(qint8 device)
+void SPI::closePort(qint8 device)
 {
-    int status_value = -1;
+    qint16 status_value = -1;
     qint8 *cs_fd;
 
     if (device)
@@ -109,20 +110,20 @@ qint16 SPI::closePort(qint8 device)
         perror("Error - Could not close SPI device");
         exit(1);
     }
-    return(status_value);
+
 }
 
-qint16 SPI::write(qint8 spi_device, unsigned char *data, qint16 length)
+void SPI::write(qint8 device, unsigned char *data, qint16 length)
 {
     struct spi_ioc_transfer spi[length];
-    int i = 0;
-    int retVal = -1;
-    qint8 *cs_fd;
+    qint16 i = 0;
+    qint16 retVal = -1;
+    qint8 *csFd;
 
-    if (spi_device)
-        cs_fd = &cs1Fd;
+    if (device)
+        csFd = &cs1Fd;
     else
-        cs_fd = &cs0Fd;
+        csFd = &cs0Fd;
 
     //one spi transfer for each byte
 
@@ -138,35 +139,14 @@ qint16 SPI::write(qint8 spi_device, unsigned char *data, qint16 length)
         spi[i].cs_change = 0;
     }
 
-    retVal = ioctl(*cs_fd, SPI_IOC_MESSAGE(length), &spi) ;
-    //retVal = ioctl(*spi_cs_fd, SPI_IOC_WR_BITS_PER_WORD, &spi);
+    retVal = ioctl(*csFd, SPI_IOC_MESSAGE(length), &spi) ;
+
     if(retVal < 0)
     {
         perror("Error - Problem transmitting spi data..ioctl");
         exit(1);
     }
 
-    return retVal;
-}
-
-void SPI::read()
-{
-    int retVal = -1;
-    u_int8_t tx[] = {MCP_READ, 0x31, 0x00};
-    write(0, tx, sizeof(tx));
-
-    //for(retVal =0; retVal < sizeof(tx); ++retVal)
-    //{
-    //    printf("Read 0x31: %.2X \n", *(tx+2));
-    //}
-
-    u_int8_t rx[] = {MCP_READ, 0x34, 0x00};
-    write(0, rx, sizeof(rx));
-
-    for(retVal =0; retVal < sizeof(rx); ++retVal)
-    {
-        printf("Read 0x31-3D: %.2X \n", *(rx+retVal));
-    }
 }
 
 void SPI::delay(qint32 counter)
@@ -177,9 +157,9 @@ void SPI::delay(qint32 counter)
     }
 }
 
-void SPI::writeBTest(qint8 value)
+void SPI::writeBufferTest(qint8 value)
 {
-    u_int8_t rx[] = {MCP_LOAD_TX0+1, value,0x07,0x08,0x09,0x0A,0x0B,0x0C,0x0D};
+    u_int8_t rx[] = {MCP_LOAD_TXB0D0, value,0x07,0x08,0x09,0x0A,0x0B,0x0C,0x0D};
     write(0, rx, sizeof(rx));
 
     delay(50000);
@@ -190,37 +170,27 @@ void SPI::writeBTest(qint8 value)
 
 void SPI::writeTxBtoCAN()
 {
-    u_int8_t ax[] = {MCP_WRITE,0x3F,0x00};
-    write(0, ax, sizeof(ax));
+    writeByte(0x3F, 0x00);
 
-    u_int8_t bx[] = {MCP_WRITE,MCP_CANINTF,0x00};
-    write(0, bx, sizeof(bx));
+    writeByte(MCP_CANINTF, 0x00);
 
-    u_int8_t rx[] = {MCP_WRITE,MCP_TXB0CTRL,0x00};
-    write(0, rx, sizeof(rx));
+    writeByte(MCP_TXB0CTRL, 0x00);
 
-    u_int8_t tx[] = {MCP_WRITE, MCP_TXB0CTRL, 0x0F};
-    write(0, tx, sizeof(tx));
+    writeByte(MCP_TXB0CTRL, 0x0F);
+
 }
 
-void SPI::readTxB0CTL()
+u_int8_t SPI::readByte(unsigned char address)
 {
-    u_int8_t rx[] = {MCP_READ, MCP_TXB0CTRL,0x00};
-    write(0, rx, sizeof(rx));
-
-    printf("Read TxB0CTL: %.2X \n", *(rx+2));
-}
-
-void SPI::readByte(unsigned char address)
-{
-    u_int8_t tx[] = {MCP_READ, address,0x00};
+    u_int8_t tx[] = {MCP_READ, address, 0x00};   //0x00, only for reading back data. has sck...maybe
     write(0, tx, sizeof(tx));
     delay(50000);
 
     printf("Read : %.2X \n",  *(tx+2));
+    return *(tx+2);
 }
-
-void SPI::readCANTF()
+//
+void SPI::readSPIConfig()
 {
     readByte(0x3F);
 
@@ -246,6 +216,8 @@ void SPI::readCANTF()
 
     readByte(MCP_EFLG);
 
+    readByte(MCP_TXB0CTRL);
+
     readByte(MCP_TXB1CTRL);
 
     readByte(MCP_TXB2CTRL);
@@ -254,13 +226,11 @@ void SPI::readCANTF()
 
     readByte(MCP_RXB1CTRL);
 }
+//
 
 void SPI::writeByte(unsigned char address, unsigned char data)
 {
-    u_int8_t writeData[] =
-    {
-        MCP_WRITE, address, data,
-    };
+    u_int8_t writeData[] = {MCP_WRITE, address, data};
 
     write(0, writeData, sizeof(writeData));
 
@@ -277,12 +247,8 @@ void SPI::initMCP2515()
 
     //initial MCP2515
     write(0, resetCommand, sizeof(resetCommand));	//Reset MCP2515
-//    DelayUs(2000);									//wait for MCP2515 start up
-    int counter = 5000;
-    while(counter)
-    {
-        counter--;
-    }
+                                                    //wait for MCP2515 start up
+    delay(5000);
 
     writeByte(MCP_CNF1,def_CNF1);				//setup CNF1~3
     writeByte(MCP_CNF2,def_CNF2);

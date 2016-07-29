@@ -57,14 +57,10 @@ int main(int argc, char *argv[])
     QObject::connect(&mainPage, SIGNAL(showKeyBoard()),&keyBoard,SLOT(receiveShow()));
     QObject::connect(&keyBoard, SIGNAL(sendInputValue(QString)),&mainPage,SLOT(receiveInputValue(QString)));
 
-    spi.closePort(0);
-    spi.openPort(0);
-
-    spi.initMCP2515();
-    int temp;
-    for (temp=0;temp<2;++temp)
+    for (qint16 temp=0;temp<7;++temp)
     {
-        spi.writeBTest(temp);
+        spi.writeBufferTest(temp);
+        //spi.readByte(MCP_RXB0CTRL+6);
         spi.delay(50000);
     }
 
@@ -72,10 +68,7 @@ int main(int argc, char *argv[])
 
     spi.delay(50000);
 
-    spi.readTxB0CTL();
-    spi.readCANTF();
-
-    //spi.closePort(0);
+    //spi.readSPIConfig();
 
     mainPage.show();
 
