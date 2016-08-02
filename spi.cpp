@@ -168,15 +168,23 @@ void SPI::writeBufferTest(qint8 value)
     write(0, tx, sizeof(tx));
 }
 
-void SPI::writeTxBtoCAN()
+void SPI::writeTxBtoCAN(quint8 buffer)
 {
-    writeByte(0x3F, 0x00);
-
-    writeByte(MCP_CANINTF, 0x00);
-
-    writeByte(MCP_TXB0CTRL, 0x00);
-
-    writeByte(MCP_TXB0CTRL, 0x0F);
+    switch(buffer)
+    {
+        case 0:
+            writeByte(MCP_TXB0CTRL, 0x0F);
+            break;
+        case 1:
+            writeByte(MCP_TXB1CTRL, 0x0F);
+            break;
+        case 2:
+            writeByte(MCP_TXB2CTRL, 0x0F);
+            break;
+        default:
+            writeByte(MCP_TXB0CTRL, 0x0F);
+            break;
+    }
 
 }
 
@@ -242,13 +250,11 @@ void SPI::initMCP2515()
     //initial SPI
     closePort(0);
     openPort(0);
-
-    u_int8_t resetCommand[] = {MCP_RESET};
-
+    //printf("initMCP2515 start \n");
     //initial MCP2515
-    write(0, resetCommand, sizeof(resetCommand));	//Reset MCP2515
-                                                    //wait for MCP2515 start up
-    delay(5000);
+    writeByte(MCP_RESET,0x00);                   //Reset MCP2515
+                                                 //wait for MCP2515 start up
+    delay(50000);
 
     writeByte(MCP_CNF1,def_CNF1);				//setup CNF1~3
     writeByte(MCP_CNF2,def_CNF2);
@@ -273,6 +279,8 @@ void SPI::initMCP2515()
     writeByte(MCP_RXF2EID0,def_RXF2EID0);
 
     writeByte(MCP_CANCTRL,def_CANCTRL);		//change to normal mode
+    writeByte(MCP_CANINTE, 0X01);
+    //writeByte(MCP_RXB0CTRL, );
 
     writeByte(MCP_TXB0CTRL+1,def_TXB0SIDH);		//setup TXB0
     writeByte(MCP_TXB0CTRL+2,def_TXB0SIDL);
@@ -293,4 +301,32 @@ void SPI::initMCP2515()
     writeByte(MCP_TXB1CTRL+7,0);
     writeByte(MCP_TXB1CTRL+8,0);
     writeByte(MCP_TXB1CTRL+9,0);
+
+    //printf("initMCP2515 end \n");
+}
+
+void SPI::readRXBuffer()
+{
+    u_int8_t rx[] = {MCP_READ_RX0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};   //0x00, only for reading back data. has sck...maybe
+    write(0, rx, sizeof(rx));
+    delay(50000);
+
+    for(qint8 temp=0;temp<sizeof(rx);++temp)
+    {
+        printf("Read RX Buffer: %.2X \n",  *(rx+temp));
+    }
+    delay(5000);
+}
+
+void SPI::clearReadRXBuffer()
+{
+    /*
+    u_int8_t tx[] = {MCP_READ_STATUS, 0x00, 0x00};   //0x00, only for reading back data. has sck...maybe
+    write(0, tx, sizeof(tx));
+    delay(5000);
+    printf("Read : %.2X \n",  *(tx+1));
+    printf("Read : %.2X \n",  *(tx+2));
+    delay(5000);
+    */
+    writeByte(MCP_CANINTF, 0x00);
 }

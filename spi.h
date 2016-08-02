@@ -33,11 +33,13 @@ public:
     void write(qint8 device, unsigned char *data, qint16 length);
     void delay(qint32 counter);
     void writeBufferTest(qint8 value);
-    void writeTxBtoCAN();
+    void writeTxBtoCAN(quint8 buffer);
     u_int8_t readByte(unsigned char address);
     void readSPIConfig();
     void writeByte(unsigned char address, unsigned char data);
     void initMCP2515();
+    void readRXBuffer();
+    void clearReadRXBuffer();
 
 };
 
