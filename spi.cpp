@@ -113,7 +113,7 @@ void SPI::closePort(qint8 device)
 
 }
 
-void SPI::write(qint8 device, unsigned char *data, qint16 length)
+void SPI::write(qint8 device, quint8 *data, qint16 length)
 {
     struct spi_ioc_transfer spi[length];
     qint16 i = 0;
@@ -159,12 +159,12 @@ void SPI::delay(qint32 counter)
 
 void SPI::writeBufferTest(qint8 value)
 {
-    u_int8_t rx[] = {MCP_LOAD_TXB0D0, value,0x07,0x08,0x09,0x0A,0x0B,0x0C,0x0D};
+    quint8 rx[] = {MCP_LOAD_TXB0D0, value,0x07,0x08,0x09,0x0A,0x0B,0x0C,0x0D};
     write(0, rx, sizeof(rx));
 
     delay(50000);
 
-    u_int8_t tx[] = {MCP_WRITE, MCP_TXB0CTRL, 0x0F};
+    quint8 tx[] = {MCP_WRITE, MCP_TXB0CTRL, 0x0F};
     write(0, tx, sizeof(tx));
 }
 
@@ -188,9 +188,9 @@ void SPI::writeTxBtoCAN(quint8 buffer)
 
 }
 
-u_int8_t SPI::readByte(unsigned char address)
+quint8 SPI::readByte(quint8 address)
 {
-    u_int8_t tx[] = {MCP_READ, address, 0x00};   //0x00, only for reading back data. has sck...maybe
+    quint8 tx[3] = {MCP_READ, address};   //0x00, only for reading back data. has sck...maybe
     write(0, tx, sizeof(tx));
     delay(50000);
 
@@ -236,9 +236,9 @@ void SPI::readSPIConfig()
 }
 //
 
-void SPI::writeByte(unsigned char address, unsigned char data)
+void SPI::writeByte(quint8 address, quint8 data)
 {
-    u_int8_t writeData[] = {MCP_WRITE, address, data};
+    quint8 writeData[] = {MCP_WRITE, address, data};
 
     write(0, writeData, sizeof(writeData));
 
@@ -305,10 +305,10 @@ void SPI::initMCP2515()
     //printf("initMCP2515 end \n");
 }
 
-void SPI::readRXBuffer()
+void SPI::readRXBuffer(quint8 command, quint8 length)
 {
-    u_int8_t rx[] = {MCP_READ_RX0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};   //0x00, only for reading back data. has sck...maybe
-    write(0, rx, sizeof(rx));
+    quint8 rx[length] = {command};   //0x00, only for reading back data. has sck...maybe
+    write(0, rx, length);
     delay(50000);
 
     for(qint8 temp=0;temp<sizeof(rx);++temp)
@@ -321,7 +321,7 @@ void SPI::readRXBuffer()
 void SPI::clearReadRXBuffer()
 {
     /*
-    u_int8_t tx[] = {MCP_READ_STATUS, 0x00, 0x00};   //0x00, only for reading back data. has sck...maybe
+    quint8 tx[] = {MCP_READ_STATUS, 0x00, 0x00};   //0x00, only for reading back data. has sck...maybe
     write(0, tx, sizeof(tx));
     delay(5000);
     printf("Read : %.2X \n",  *(tx+1));

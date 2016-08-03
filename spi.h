@@ -20,8 +20,8 @@ class SPI
 {
     qint8 cs0Fd;				//file descriptor for the SPI device
     qint8 cs1Fd;				//file descriptor for the SPI device
-    unsigned char spiMode;
-    unsigned char spiBitsPerWord;
+    quint8 spiMode;
+    quint8 spiBitsPerWord;
     quint16 spiSpeed;
 
 public:
@@ -30,15 +30,15 @@ public:
 
     void openPort(qint8 device);
     void closePort(qint8 device);
-    void write(qint8 device, unsigned char *data, qint16 length);
+    void write(qint8 device, quint8 *data, qint16 length);
     void delay(qint32 counter);
     void writeBufferTest(qint8 value);
     void writeTxBtoCAN(quint8 buffer);
-    u_int8_t readByte(unsigned char address);
+    quint8 readByte(quint8 address);
     void readSPIConfig();
-    void writeByte(unsigned char address, unsigned char data);
+    void writeByte(quint8 address, quint8 data);
     void initMCP2515();
-    void readRXBuffer();
+    void readRXBuffer(quint8 command, quint8 length);
     void clearReadRXBuffer();
 
 };
