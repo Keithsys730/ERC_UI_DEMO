@@ -1,4 +1,5 @@
 #include "spi.h"
+#include "CMU-CanBus.h"
 
 SPI::SPI()
 {
@@ -157,7 +158,7 @@ void SPI::delay(qint32 counter)
     }
 }
 
-void SPI::writeBufferTest(qint8 value)
+void SPI::writeBufferTest(quint8 value)
 {
     quint8 rx[] = {MCP_LOAD_TXB0D0, value,0x07,0x08,0x09,0x0A,0x0B,0x0C,0x0D};
     write(0, rx, sizeof(rx));
@@ -329,4 +330,9 @@ void SPI::clearReadRXBuffer()
     delay(5000);
     */
     writeByte(MCP_CANINTF, 0x00);
+}
+
+void SPI::StartCANbusComm()
+{
+    canbusComm();
 }

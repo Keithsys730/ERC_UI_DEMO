@@ -28,7 +28,12 @@ HEADERS  += mainwindow.h \
     informationdialog.h \
     keyboard.h \
     MCP2515.h \
-    spi.h
+    spi.h \
+    CMU-CanBus.h \
+    CMU-comm.h \
+    CMU-GlobalVar.h \
+    DSP280x_ECan.h \
+    DSP280x_Gpio.h
 
 FORMS    += mainwindow.ui \
     settingdialog.ui \

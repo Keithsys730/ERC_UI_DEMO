@@ -12,6 +12,7 @@
 #include <cstring>
 #include <QtGlobal>
 #include <MCP2515.h>
+//#include "CMU-CanBus.h"
 
 #define SPIDev0 "/dev/spidev0.0"
 #define SPIDev1 "/dev/spidev0.1"
@@ -32,7 +33,7 @@ public:
     void closePort(qint8 device);
     void write(qint8 device, quint8 *data, qint16 length);
     void delay(qint32 counter);
-    void writeBufferTest(qint8 value);
+    void writeBufferTest(quint8 value);
     void writeTxBtoCAN(quint8 buffer);
     quint8 readByte(quint8 address);
     void readSPIConfig();
@@ -40,6 +41,7 @@ public:
     void initMCP2515();
     void readRXBuffer(quint8 command, quint8 length);
     void clearReadRXBuffer();
+    void StartCANbusComm();
 
 };
 

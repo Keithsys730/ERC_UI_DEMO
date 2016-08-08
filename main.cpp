@@ -60,7 +60,7 @@ int main(int argc, char *argv[])
     //
     for (qint16 temp=0;temp<7;++temp)
     {
-        spi.writeBufferTest(temp);
+        //spi.writeBufferTest(temp);
         //spi.readByte(MCP_RXB0CTRL+6);
         spi.delay(50000);
     }
@@ -83,7 +83,8 @@ int main(int argc, char *argv[])
 
     spi.readRXBuffer(MCP_READ_RX0, 14);
     spi.readByte(MCP_CANINTF);
-    spi.clearReadRXBuffer();
+    //spi.clearReadRXBuffer();
+    spi.StartCANbusComm();
 
     mainPage.show();
 
